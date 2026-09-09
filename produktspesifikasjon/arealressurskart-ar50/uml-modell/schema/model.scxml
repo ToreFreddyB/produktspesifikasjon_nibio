@@ -1,0 +1,833 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<sc:Model xmlns:sc="http://shapechange.net/model" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" encoding="UTF-8" scxmlProducer="ps.editor.actions" scxmlProducerVersion="1.0" xsi:schemaLocation="http://shapechange.net/model http://shapechange.net/resources/schema/ShapeChangeExportedModel.xsd">
+ <sc:packages>
+  <sc:Package>
+   <sc:name>uml-modell</sc:name>
+   <sc:id>P1</sc:id>
+   <sc:stereotypes>
+    <sc:Stereotype>application schema</sc:Stereotype>
+   </sc:stereotypes>
+   <sc:taggedValues>
+    <sc:TaggedValue>
+     <sc:name>targetNamespace</sc:name>
+     <sc:values>
+      <sc:Value>https://skjema.geonorge.no/SOSI/produktspesifikasjon/arealressurskart-ar50/uml-modell/1.0</sc:Value>
+     </sc:values>
+    </sc:TaggedValue>
+    <sc:TaggedValue>
+     <sc:name>xmlns</sc:name>
+     <sc:values>
+      <sc:Value>umlmodell</sc:Value>
+     </sc:values>
+    </sc:TaggedValue>
+    <sc:TaggedValue>
+     <sc:name>version</sc:name>
+     <sc:values>
+      <sc:Value>1.0</sc:Value>
+     </sc:values>
+    </sc:TaggedValue>
+    <sc:TaggedValue>
+     <sc:name>xsdDocument</sc:name>
+     <sc:values>
+      <sc:Value>uml-modell.xsd</sc:Value>
+     </sc:values>
+    </sc:TaggedValue>
+    <sc:TaggedValue>
+     <sc:name>jsonDocument</sc:name>
+     <sc:values>
+      <sc:Value>uml-modell.json</sc:Value>
+     </sc:values>
+    </sc:TaggedValue>
+   </sc:taggedValues>
+   <sc:classes>
+    <sc:Class>
+     <sc:name>Identifikasjon</sc:name>
+     <sc:id>C4</sc:id>
+     <sc:stereotypes>
+      <sc:Stereotype>datatype</sc:Stereotype>
+     </sc:stereotypes>
+     <sc:properties>
+      <sc:Property>
+       <sc:name>lokalId</sc:name>
+       <sc:id>C4_1</sc:id>
+       <sc:descriptors>
+        <sc:documentation>
+         <sc:descriptorValues>
+          <sc:DescriptorValue>lokal identifikator, tildelt av dataleverendør/dataforvalter. Den lokale identifikatoren er unik innenfor navnerommet, ingen andre objekter har samme identifikator.
+
+NOTE: Det er data leverendørens ansvar å sørge for at denne lokale identifikatoren er unik innenfor navnerommet.</sc:DescriptorValue>
+         </sc:descriptorValues>
+        </sc:documentation>
+       </sc:descriptors>
+       <sc:taggedValues>
+        <sc:TaggedValue>
+         <sc:name>SOSI_navn</sc:name>
+         <sc:values>
+          <sc:Value>LOKALID</sc:Value>
+         </sc:values>
+        </sc:TaggedValue>
+       </sc:taggedValues>
+       <sc:cardinality>1</sc:cardinality>
+       <sc:sequenceNumber>1</sc:sequenceNumber>
+       <sc:typeName>CharacterString</sc:typeName>
+      </sc:Property>
+      <sc:Property>
+       <sc:name>navnerom</sc:name>
+       <sc:id>C4_2</sc:id>
+       <sc:descriptors>
+        <sc:documentation>
+         <sc:descriptorValues>
+          <sc:DescriptorValue>navnerom som unikt identifiserer datakilden til objektet, starter med to bokstavs kode jfr ISO 3166. Benytter understreking  ("_") dersom data produsenten ikke er assosiert med bare et land.
+
+NOTE 1 : Verdien for nanverom vil eies av den dataprodusent som har ansvar for de unike identifikatorene og vil registreres i "INSPIRE external  Object Identifier Namespaces Register"
+
+Eksempel: NO_SL_AR50_2014</sc:DescriptorValue>
+         </sc:descriptorValues>
+        </sc:documentation>
+       </sc:descriptors>
+       <sc:taggedValues>
+        <sc:TaggedValue>
+         <sc:name>SOSI_navn</sc:name>
+         <sc:values>
+          <sc:Value>NAVNEROM</sc:Value>
+         </sc:values>
+        </sc:TaggedValue>
+       </sc:taggedValues>
+       <sc:cardinality>1</sc:cardinality>
+       <sc:sequenceNumber>2</sc:sequenceNumber>
+       <sc:typeName>CharacterString</sc:typeName>
+      </sc:Property>
+     </sc:properties>
+    </sc:Class>
+    <sc:Class>
+     <sc:name>Kopidata</sc:name>
+     <sc:id>C5</sc:id>
+     <sc:stereotypes>
+      <sc:Stereotype>datatype</sc:Stereotype>
+     </sc:stereotypes>
+     <sc:properties>
+      <sc:Property>
+       <sc:name>områdeId</sc:name>
+       <sc:id>C5_1</sc:id>
+       <sc:descriptors>
+        <sc:documentation>
+         <sc:descriptorValues>
+          <sc:DescriptorValue>identifikasjon av område som dataene dekker
+
+Merknad: Kan angis med kommunenummer eller fylkesnummer. Disse bør spesifiseres nærmere.</sc:DescriptorValue>
+         </sc:descriptorValues>
+        </sc:documentation>
+       </sc:descriptors>
+       <sc:taggedValues>
+        <sc:TaggedValue>
+         <sc:name>SOSI_navn</sc:name>
+         <sc:values>
+          <sc:Value>OMRÅDEID</sc:Value>
+         </sc:values>
+        </sc:TaggedValue>
+       </sc:taggedValues>
+       <sc:cardinality>1</sc:cardinality>
+       <sc:sequenceNumber>1</sc:sequenceNumber>
+       <sc:typeName>Integer</sc:typeName>
+      </sc:Property>
+      <sc:Property>
+       <sc:name>originalDatavert</sc:name>
+       <sc:id>C5_2</sc:id>
+       <sc:descriptors>
+        <sc:documentation>
+         <sc:descriptorValues>
+          <sc:DescriptorValue>ansvarlig etat for forvaltning av data</sc:DescriptorValue>
+         </sc:descriptorValues>
+        </sc:documentation>
+       </sc:descriptors>
+       <sc:taggedValues>
+        <sc:TaggedValue>
+         <sc:name>SOSI_navn</sc:name>
+         <sc:values>
+          <sc:Value>ORIGINALDATAVERT</sc:Value>
+         </sc:values>
+        </sc:TaggedValue>
+       </sc:taggedValues>
+       <sc:cardinality>1</sc:cardinality>
+       <sc:sequenceNumber>2</sc:sequenceNumber>
+       <sc:typeName>CharacterString</sc:typeName>
+      </sc:Property>
+      <sc:Property>
+       <sc:name>kopidato</sc:name>
+       <sc:id>C5_3</sc:id>
+       <sc:descriptors>
+        <sc:documentation>
+         <sc:descriptorValues>
+          <sc:DescriptorValue>dato når objektet ble kopiert fra originaldatasettet
+
+Merknad:
+Er en del av egenskapen Kopidata. Brukes i de tilfeller hvor en kopidatabase brukes til distribusjon.
+Å kopiere et datasett til en kopidatabase skal ikke føre til at Oppdateringsdato blir endret.
+Eventuell redigering av data i et kopidatasett medfører ny Oppdateringsdato, Datafangstdato og/eller Verifiseringsdato.</sc:DescriptorValue>
+         </sc:descriptorValues>
+        </sc:documentation>
+       </sc:descriptors>
+       <sc:taggedValues>
+        <sc:TaggedValue>
+         <sc:name>SOSI_navn</sc:name>
+         <sc:values>
+          <sc:Value>KOPIDATO</sc:Value>
+         </sc:values>
+        </sc:TaggedValue>
+       </sc:taggedValues>
+       <sc:cardinality>1</sc:cardinality>
+       <sc:sequenceNumber>3</sc:sequenceNumber>
+       <sc:typeName>Date</sc:typeName>
+      </sc:Property>
+     </sc:properties>
+    </sc:Class>
+    <sc:Class>
+     <sc:name>Posisjonskvalitet</sc:name>
+     <sc:id>C6</sc:id>
+     <sc:stereotypes>
+      <sc:Stereotype>datatype</sc:Stereotype>
+     </sc:stereotypes>
+     <sc:properties>
+      <sc:Property>
+       <sc:name>målemetode</sc:name>
+       <sc:id>C6_1</sc:id>
+       <sc:descriptors>
+        <sc:documentation>
+         <sc:descriptorValues>
+          <sc:DescriptorValue>metode for måling i grunnriss (x,y), og høyde (z) når metoden er den samme som ved måling i grunnriss</sc:DescriptorValue>
+         </sc:descriptorValues>
+        </sc:documentation>
+       </sc:descriptors>
+       <sc:cardinality>1</sc:cardinality>
+       <sc:sequenceNumber>1</sc:sequenceNumber>
+       <sc:typeId>C7</sc:typeId>
+       <sc:typeName>Målemetode</sc:typeName>
+      </sc:Property>
+     </sc:properties>
+    </sc:Class>
+    <sc:Class>
+     <sc:name>Målemetode</sc:name>
+     <sc:id>C7</sc:id>
+     <sc:stereotypes>
+      <sc:Stereotype>codelist</sc:Stereotype>
+     </sc:stereotypes>
+     <sc:descriptors>
+      <sc:documentation>
+       <sc:descriptorValues>
+        <sc:DescriptorValue>metode som ligger til grunn for registrering av posisjon
+
+
+-- Definition - -
+method on which registration of position is based</sc:DescriptorValue>
+       </sc:descriptorValues>
+      </sc:documentation>
+     </sc:descriptors>
+     <sc:taggedValues>
+      <sc:TaggedValue>
+       <sc:name>codeList</sc:name>
+       <sc:values>
+        <sc:Value>https://register.geonorge.no/sosi-kodelister/generelle-konsepter/4.5/m%C3%A5lemetodekode</sc:Value>
+       </sc:values>
+      </sc:TaggedValue>
+      <sc:TaggedValue>
+       <sc:name>asDictionary</sc:name>
+       <sc:values>
+        <sc:Value>true</sc:Value>
+       </sc:values>
+      </sc:TaggedValue>
+     </sc:taggedValues>
+    </sc:Class>
+    <sc:Class>
+     <sc:name>ArealressursArealtype</sc:name>
+     <sc:id>C8</sc:id>
+     <sc:stereotypes>
+      <sc:Stereotype>codelist</sc:Stereotype>
+     </sc:stereotypes>
+     <sc:descriptors>
+      <sc:documentation>
+       <sc:descriptorValues>
+        <sc:DescriptorValue>hovedinndeling etter kriterier for vegetasjon, naturlig drenering og kulturpåvirkning
+
+
+-- Definition - -
+main categorization according to criteria for vegetation, natural drainage and cultural impact</sc:DescriptorValue>
+       </sc:descriptorValues>
+      </sc:documentation>
+     </sc:descriptors>
+     <sc:taggedValues>
+      <sc:TaggedValue>
+       <sc:name>codeList</sc:name>
+       <sc:values>
+        <sc:Value>https://register.geonorge.no/sosi-kodelister/arealressurs/arealressursarealtype</sc:Value>
+       </sc:values>
+      </sc:TaggedValue>
+      <sc:TaggedValue>
+       <sc:name>asDictionary</sc:name>
+       <sc:values>
+        <sc:Value>true</sc:Value>
+       </sc:values>
+      </sc:TaggedValue>
+     </sc:taggedValues>
+    </sc:Class>
+    <sc:Class>
+     <sc:name>ArealressursSkogbonitet</sc:name>
+     <sc:id>C9</sc:id>
+     <sc:stereotypes>
+      <sc:Stereotype>codelist</sc:Stereotype>
+     </sc:stereotypes>
+     <sc:descriptors>
+      <sc:documentation>
+       <sc:descriptorValues>
+        <sc:DescriptorValue>inndeling etter arealets evne til å produsere trevirke
+
+
+-- Definition - -
+categorization according to the area's ability to produce wood</sc:DescriptorValue>
+       </sc:descriptorValues>
+      </sc:documentation>
+     </sc:descriptors>
+     <sc:taggedValues>
+      <sc:TaggedValue>
+       <sc:name>codeList</sc:name>
+       <sc:values>
+        <sc:Value>https://register.geonorge.no/sosi-kodelister/arealressurs/arealressursskogbonitet</sc:Value>
+       </sc:values>
+      </sc:TaggedValue>
+      <sc:TaggedValue>
+       <sc:name>asDictionary</sc:name>
+       <sc:values>
+        <sc:Value>true</sc:Value>
+       </sc:values>
+      </sc:TaggedValue>
+     </sc:taggedValues>
+    </sc:Class>
+    <sc:Class>
+     <sc:name>ArealressursTreslag</sc:name>
+     <sc:id>C10</sc:id>
+     <sc:stereotypes>
+      <sc:Stereotype>codelist</sc:Stereotype>
+     </sc:stereotypes>
+     <sc:descriptors>
+      <sc:documentation>
+       <sc:descriptorValues>
+        <sc:DescriptorValue>inndeling etter fordeling av kronedekket mellom bartrær og lauvtrær
+
+
+-- Definition - -
+categorization according to the distribution of the crown cover between coniferous and deciduous trees</sc:DescriptorValue>
+       </sc:descriptorValues>
+      </sc:documentation>
+     </sc:descriptors>
+     <sc:taggedValues>
+      <sc:TaggedValue>
+       <sc:name>codeList</sc:name>
+       <sc:values>
+        <sc:Value>https://register.geonorge.no/sosi-kodelister/arealressurs/arealressurstreslag</sc:Value>
+       </sc:values>
+      </sc:TaggedValue>
+      <sc:TaggedValue>
+       <sc:name>asDictionary</sc:name>
+       <sc:values>
+        <sc:Value>true</sc:Value>
+       </sc:values>
+      </sc:TaggedValue>
+     </sc:taggedValues>
+    </sc:Class>
+    <sc:Class>
+     <sc:name>ArealressursJordbruk</sc:name>
+     <sc:id>C11</sc:id>
+     <sc:stereotypes>
+      <sc:Stereotype>codelist</sc:Stereotype>
+     </sc:stereotypes>
+     <sc:descriptors>
+      <sc:documentation>
+       <sc:descriptorValues>
+        <sc:DescriptorValue>Forenklet inndeling av jordbruksareal for arealressurskart i målestokk 1:50000</sc:DescriptorValue>
+       </sc:descriptorValues>
+      </sc:documentation>
+     </sc:descriptors>
+     <sc:taggedValues>
+      <sc:TaggedValue>
+       <sc:name>codeList</sc:name>
+       <sc:values>
+        <sc:Value>https://register.geonorge.no/sosi-kodelister/arealressurs/arealressursjordbruk</sc:Value>
+       </sc:values>
+      </sc:TaggedValue>
+      <sc:TaggedValue>
+       <sc:name>asDictionary</sc:name>
+       <sc:values>
+        <sc:Value>true</sc:Value>
+       </sc:values>
+      </sc:TaggedValue>
+     </sc:taggedValues>
+    </sc:Class>
+    <sc:Class>
+     <sc:name>ArealressursVegetasjonsdekke</sc:name>
+     <sc:id>C12</sc:id>
+     <sc:stereotypes>
+      <sc:Stereotype>codelist</sc:Stereotype>
+     </sc:stereotypes>
+     <sc:descriptors>
+      <sc:documentation>
+       <sc:descriptorValues>
+        <sc:DescriptorValue>informasjon om vegetasjonsdekkets frodighet på snaumark
+
+
+-- Definition - -
+information concerning the lushness of the vegetation cover on unforested land</sc:DescriptorValue>
+       </sc:descriptorValues>
+      </sc:documentation>
+     </sc:descriptors>
+     <sc:taggedValues>
+      <sc:TaggedValue>
+       <sc:name>codeList</sc:name>
+       <sc:values>
+        <sc:Value>https://register.geonorge.no/sosi-kodelister/arealressurs/arealressursvegetasjonsdekke</sc:Value>
+       </sc:values>
+      </sc:TaggedValue>
+      <sc:TaggedValue>
+       <sc:name>asDictionary</sc:name>
+       <sc:values>
+        <sc:Value>true</sc:Value>
+       </sc:values>
+      </sc:TaggedValue>
+     </sc:taggedValues>
+    </sc:Class>
+    <sc:Class>
+     <sc:name>ArealressursKartstandard</sc:name>
+     <sc:id>C13</sc:id>
+     <sc:stereotypes>
+      <sc:Stereotype>codelist</sc:Stereotype>
+     </sc:stereotypes>
+     <sc:descriptors>
+      <sc:documentation>
+       <sc:descriptorValues>
+        <sc:DescriptorValue>informasjon om hvilket klassifikasjonssystem som er brukt
+
+
+-- Definition - -
+information concerning which classification system has been used</sc:DescriptorValue>
+       </sc:descriptorValues>
+      </sc:documentation>
+     </sc:descriptors>
+     <sc:taggedValues>
+      <sc:TaggedValue>
+       <sc:name>codeList</sc:name>
+       <sc:values>
+        <sc:Value>https://register.geonorge.no/sosi-kodelister/arealressurs/arealressurskartstandard</sc:Value>
+       </sc:values>
+      </sc:TaggedValue>
+      <sc:TaggedValue>
+       <sc:name>asDictionary</sc:name>
+       <sc:values>
+        <sc:Value>true</sc:Value>
+       </sc:values>
+      </sc:TaggedValue>
+     </sc:taggedValues>
+    </sc:Class>
+   </sc:classes>
+   <sc:packages>
+    <sc:Package>
+     <sc:name>ProduktspesifikasjonAR50-20260701</sc:name>
+     <sc:id>P2</sc:id>
+     <sc:classes>
+      <sc:Class>
+       <sc:name>Fellesegenskaper</sc:name>
+       <sc:id>C1</sc:id>
+       <sc:stereotypes>
+        <sc:Stereotype>featuretype</sc:Stereotype>
+       </sc:stereotypes>
+       <sc:descriptors>
+        <sc:documentation>
+         <sc:descriptorValues>
+          <sc:DescriptorValue>abstrakt objekt som bærer en rekke egenskaper som er fagområde-uavhengige og kan benyttes for alle objekttyper
+
+Merknad:
+Spesielt i produktspesifikasjonsarbeid vil en velge egenskaper og av grensningslinjer fra denne klassen.</sc:DescriptorValue>
+         </sc:descriptorValues>
+        </sc:documentation>
+       </sc:descriptors>
+       <sc:isAbstract>true</sc:isAbstract>
+       <sc:properties>
+        <sc:Property>
+         <sc:name>identifikasjon</sc:name>
+         <sc:id>C1_1</sc:id>
+         <sc:descriptors>
+          <sc:documentation>
+           <sc:descriptorValues>
+            <sc:DescriptorValue>unik identifikasjon av et objekt</sc:DescriptorValue>
+           </sc:descriptorValues>
+          </sc:documentation>
+         </sc:descriptors>
+         <sc:cardinality>1</sc:cardinality>
+         <sc:sequenceNumber>1</sc:sequenceNumber>
+         <sc:typeId>C4</sc:typeId>
+         <sc:typeName>Identifikasjon</sc:typeName>
+        </sc:Property>
+        <sc:Property>
+         <sc:name>informasjon</sc:name>
+         <sc:id>C1_2</sc:id>
+         <sc:descriptors>
+          <sc:documentation>
+           <sc:descriptorValues>
+            <sc:DescriptorValue>generell opplysning
+
+Merknad:
+Her legges det inn utfyllende informasjon om objektet</sc:DescriptorValue>
+           </sc:descriptorValues>
+          </sc:documentation>
+         </sc:descriptors>
+         <sc:taggedValues>
+          <sc:TaggedValue>
+           <sc:name>SOSI_navn</sc:name>
+           <sc:values>
+            <sc:Value>INFORMASJON</sc:Value>
+           </sc:values>
+          </sc:TaggedValue>
+         </sc:taggedValues>
+         <sc:cardinality>1</sc:cardinality>
+         <sc:sequenceNumber>2</sc:sequenceNumber>
+         <sc:typeName>CharacterString</sc:typeName>
+        </sc:Property>
+        <sc:Property>
+         <sc:name>kopidata</sc:name>
+         <sc:id>C1_3</sc:id>
+         <sc:descriptors>
+          <sc:documentation>
+           <sc:descriptorValues>
+            <sc:DescriptorValue>angivelse av at objektet er hentet fra en kopi av originaldata
+Merknad:
+Kan benyttes dersom man gjør et uttak av en database som ikke inneholder originaldataene.</sc:DescriptorValue>
+           </sc:descriptorValues>
+          </sc:documentation>
+         </sc:descriptors>
+         <sc:cardinality>1</sc:cardinality>
+         <sc:sequenceNumber>3</sc:sequenceNumber>
+         <sc:typeId>C5</sc:typeId>
+         <sc:typeName>Kopidata</sc:typeName>
+        </sc:Property>
+        <sc:Property>
+         <sc:name>kvalitet</sc:name>
+         <sc:id>C1_4</sc:id>
+         <sc:descriptors>
+          <sc:documentation>
+           <sc:descriptorValues>
+            <sc:DescriptorValue>beskrivelse av kvaliteten på stedfestingen
+
+Merknad: Denne er identisk med ..KVALITET i tidligere versjoner av SOSI.</sc:DescriptorValue>
+           </sc:descriptorValues>
+          </sc:documentation>
+         </sc:descriptors>
+         <sc:cardinality>1</sc:cardinality>
+         <sc:sequenceNumber>4</sc:sequenceNumber>
+         <sc:typeId>C6</sc:typeId>
+         <sc:typeName>Posisjonskvalitet</sc:typeName>
+        </sc:Property>
+        <sc:Property>
+         <sc:name>oppdateringsdato</sc:name>
+         <sc:id>C1_5</sc:id>
+         <sc:descriptors>
+          <sc:documentation>
+           <sc:descriptorValues>
+            <sc:DescriptorValue>dato for siste endring på objektetdataene
+
+Merknad:
+Oppdateringsdato kan være forskjellig fra Datafangsdato ved at data som er registrert kan bufres en kortere eller lengre periode før disse legges inn i datasystemet (databasen).
+
+-Definition-
+Date and time at which this version of the spatial object was inserted or changed in the spatial data set.</sc:DescriptorValue>
+           </sc:descriptorValues>
+          </sc:documentation>
+         </sc:descriptors>
+         <sc:taggedValues>
+          <sc:TaggedValue>
+           <sc:name>SOSI_navn</sc:name>
+           <sc:values>
+            <sc:Value>OPPDATERINGSDATO</sc:Value>
+           </sc:values>
+          </sc:TaggedValue>
+         </sc:taggedValues>
+         <sc:cardinality>1</sc:cardinality>
+         <sc:sequenceNumber>5</sc:sequenceNumber>
+         <sc:typeName>Date</sc:typeName>
+        </sc:Property>
+       </sc:properties>
+      </sc:Class>
+      <sc:Class>
+       <sc:name>ArealressursFlate</sc:name>
+       <sc:id>C2</sc:id>
+       <sc:stereotypes>
+        <sc:Stereotype>featuretype</sc:Stereotype>
+       </sc:stereotypes>
+       <sc:descriptors>
+        <sc:documentation>
+         <sc:descriptorValues>
+          <sc:DescriptorValue>et sammenhengende areal som er tilordnet de samme egenskapsverdiene i henhold til et Arealressursklassifikasjonssystem
+
+
+-- Definition --
+a continuous area which has been assigned the same attribute values in accordance with an area resource classification system</sc:DescriptorValue>
+         </sc:descriptorValues>
+        </sc:documentation>
+       </sc:descriptors>
+       <sc:supertypes>
+        <sc:SupertypeId>C1</sc:SupertypeId>
+       </sc:supertypes>
+       <sc:properties>
+        <sc:Property>
+         <sc:name>område</sc:name>
+         <sc:id>C2_1</sc:id>
+         <sc:descriptors>
+          <sc:documentation>
+           <sc:descriptorValues>
+            <sc:DescriptorValue>objektets utstrekning
+
+-- Definition --
+area over which an object extends</sc:DescriptorValue>
+           </sc:descriptorValues>
+          </sc:documentation>
+         </sc:descriptors>
+         <sc:taggedValues>
+          <sc:TaggedValue>
+           <sc:name>SOSI_navn</sc:name>
+           <sc:values>
+            <sc:Value>Flate</sc:Value>
+           </sc:values>
+          </sc:TaggedValue>
+         </sc:taggedValues>
+         <sc:cardinality>1</sc:cardinality>
+         <sc:sequenceNumber>1</sc:sequenceNumber>
+         <sc:typeName>GM_Surface</sc:typeName>
+        </sc:Property>
+        <sc:Property>
+         <sc:name>arealtype</sc:name>
+         <sc:id>C2_2</sc:id>
+         <sc:descriptors>
+          <sc:documentation>
+           <sc:descriptorValues>
+            <sc:DescriptorValue>hovedinndeling etter kriterier for vegetasjon, naturlig drenering og kulturpåvirkning
+
+-- Definition --
+main categorization according to criteria for vegetation, natural drainage and cultural impact</sc:DescriptorValue>
+           </sc:descriptorValues>
+          </sc:documentation>
+         </sc:descriptors>
+         <sc:taggedValues>
+          <sc:TaggedValue>
+           <sc:name>SOSI_navn</sc:name>
+           <sc:values>
+            <sc:Value>ARTYPE</sc:Value>
+           </sc:values>
+          </sc:TaggedValue>
+         </sc:taggedValues>
+         <sc:cardinality>1</sc:cardinality>
+         <sc:sequenceNumber>2</sc:sequenceNumber>
+         <sc:typeId>C8</sc:typeId>
+         <sc:typeName>ArealressursArealtype</sc:typeName>
+        </sc:Property>
+        <sc:Property>
+         <sc:name>skogbonitet</sc:name>
+         <sc:id>C2_3</sc:id>
+         <sc:descriptors>
+          <sc:documentation>
+           <sc:descriptorValues>
+            <sc:DescriptorValue>inndeling etter arealets evne til å produsere trevirke
+
+-- Definition --
+categorization according to the ability of the area to produce wood</sc:DescriptorValue>
+           </sc:descriptorValues>
+          </sc:documentation>
+         </sc:descriptors>
+         <sc:taggedValues>
+          <sc:TaggedValue>
+           <sc:name>SOSI_navn</sc:name>
+           <sc:values>
+            <sc:Value>ARSKOGBON</sc:Value>
+           </sc:values>
+          </sc:TaggedValue>
+         </sc:taggedValues>
+         <sc:cardinality>1</sc:cardinality>
+         <sc:sequenceNumber>3</sc:sequenceNumber>
+         <sc:typeId>C9</sc:typeId>
+         <sc:typeName>ArealressursSkogbonitet</sc:typeName>
+        </sc:Property>
+        <sc:Property>
+         <sc:name>treslag</sc:name>
+         <sc:id>C2_4</sc:id>
+         <sc:descriptors>
+          <sc:documentation>
+           <sc:descriptorValues>
+            <sc:DescriptorValue>inndeling etter fordeling av kronedekket mellom bartrær og lauvtrær
+
+-- Definition --
+categorization according to the distribution of crown cover between coniferous and deciduous trees</sc:DescriptorValue>
+           </sc:descriptorValues>
+          </sc:documentation>
+         </sc:descriptors>
+         <sc:taggedValues>
+          <sc:TaggedValue>
+           <sc:name>SOSI_navn</sc:name>
+           <sc:values>
+            <sc:Value>ARTRESLAG</sc:Value>
+           </sc:values>
+          </sc:TaggedValue>
+         </sc:taggedValues>
+         <sc:cardinality>1</sc:cardinality>
+         <sc:sequenceNumber>4</sc:sequenceNumber>
+         <sc:typeId>C10</sc:typeId>
+         <sc:typeName>ArealressursTreslag</sc:typeName>
+        </sc:Property>
+        <sc:Property>
+         <sc:name>jordbruk</sc:name>
+         <sc:id>C2_5</sc:id>
+         <sc:descriptors>
+          <sc:documentation>
+           <sc:descriptorValues>
+            <sc:DescriptorValue>Temaet ’Jordbruk’ dekker samme geografiske område som klasse 20 (Jordbruk) i temaet ’Arealtype’. Temaet er basert på AR5. Egenskapsverdiene er numeriske.</sc:DescriptorValue>
+           </sc:descriptorValues>
+          </sc:documentation>
+         </sc:descriptors>
+         <sc:cardinality>1</sc:cardinality>
+         <sc:sequenceNumber>5</sc:sequenceNumber>
+         <sc:typeId>C11</sc:typeId>
+         <sc:typeName>ArealressursJordbruk</sc:typeName>
+        </sc:Property>
+        <sc:Property>
+         <sc:name>vegetasjonsdekke</sc:name>
+         <sc:id>C2_6</sc:id>
+         <sc:descriptors>
+          <sc:documentation>
+           <sc:descriptorValues>
+            <sc:DescriptorValue>informasjon om vegetasjonsdekkets frodighet på snaumark
+
+-- Definition --
+information concerning the lushness of the vegetation cover on bare land</sc:DescriptorValue>
+           </sc:descriptorValues>
+          </sc:documentation>
+         </sc:descriptors>
+         <sc:taggedValues>
+          <sc:TaggedValue>
+           <sc:name>SOSI_navn</sc:name>
+           <sc:values>
+            <sc:Value>ARVEGET</sc:Value>
+           </sc:values>
+          </sc:TaggedValue>
+         </sc:taggedValues>
+         <sc:cardinality>1</sc:cardinality>
+         <sc:sequenceNumber>6</sc:sequenceNumber>
+         <sc:typeId>C12</sc:typeId>
+         <sc:typeName>ArealressursVegetasjonsdekke</sc:typeName>
+        </sc:Property>
+        <sc:Property>
+         <sc:name>kartstandard</sc:name>
+         <sc:id>C2_7</sc:id>
+         <sc:descriptors>
+          <sc:documentation>
+           <sc:descriptorValues>
+            <sc:DescriptorValue>informasjon om hvilket klassifikasjonssystem som er brukt
+
+-- Definition --
+information concerning which classification system has been used</sc:DescriptorValue>
+           </sc:descriptorValues>
+          </sc:documentation>
+         </sc:descriptors>
+         <sc:taggedValues>
+          <sc:TaggedValue>
+           <sc:name>SOSI_navn</sc:name>
+           <sc:values>
+            <sc:Value>ARKARTSTD</sc:Value>
+           </sc:values>
+          </sc:TaggedValue>
+         </sc:taggedValues>
+         <sc:cardinality>1</sc:cardinality>
+         <sc:sequenceNumber>7</sc:sequenceNumber>
+         <sc:typeId>C13</sc:typeId>
+         <sc:typeName>ArealressursKartstandard</sc:typeName>
+        </sc:Property>
+        <sc:Property>
+         <sc:name>avgrensning</sc:name>
+         <sc:id>Sas1</sc:id>
+         <sc:cardinality>1..*</sc:cardinality>
+         <sc:isNavigable>true</sc:isNavigable>
+         <sc:sequenceNumber>8</sc:sequenceNumber>
+         <sc:typeId>C3</sc:typeId>
+         <sc:typeName>ArealressursGrense</sc:typeName>
+         <sc:isAttribute>false</sc:isAttribute>
+         <sc:associationId>as1</sc:associationId>
+        </sc:Property>
+       </sc:properties>
+      </sc:Class>
+      <sc:Class>
+       <sc:name>ArealressursGrense</sc:name>
+       <sc:id>C3</sc:id>
+       <sc:stereotypes>
+        <sc:Stereotype>featuretype</sc:Stereotype>
+       </sc:stereotypes>
+       <sc:descriptors>
+        <sc:documentation>
+         <sc:descriptorValues>
+          <sc:DescriptorValue>avgrensing for en eller to arealressursflater
+
+
+-- Definition --
+delimitation for one or two area resource surfaces</sc:DescriptorValue>
+         </sc:descriptorValues>
+        </sc:documentation>
+       </sc:descriptors>
+       <sc:supertypes>
+        <sc:SupertypeId>C1</sc:SupertypeId>
+       </sc:supertypes>
+       <sc:properties>
+        <sc:Property>
+         <sc:name>grense</sc:name>
+         <sc:id>C3_1</sc:id>
+         <sc:descriptors>
+          <sc:documentation>
+           <sc:descriptorValues>
+            <sc:DescriptorValue>forløp som følger overgang mellom ulike fenomener
+
+-- Definition --
+course follwing the transition between different real world phenomena</sc:DescriptorValue>
+           </sc:descriptorValues>
+          </sc:documentation>
+         </sc:descriptors>
+         <sc:taggedValues>
+          <sc:TaggedValue>
+           <sc:name>SOSI_navn</sc:name>
+           <sc:values>
+            <sc:Value>Kurve</sc:Value>
+           </sc:values>
+          </sc:TaggedValue>
+         </sc:taggedValues>
+         <sc:cardinality>1</sc:cardinality>
+         <sc:sequenceNumber>1</sc:sequenceNumber>
+         <sc:typeName>GM_Curve</sc:typeName>
+        </sc:Property>
+       </sc:properties>
+      </sc:Class>
+     </sc:classes>
+    </sc:Package>
+   </sc:packages>
+  </sc:Package>
+ </sc:packages>
+ <sc:associations>
+  <sc:Association>
+   <sc:name>ArealressursFlate_ArealressursGrense</sc:name>
+   <sc:id>as1</sc:id>
+   <sc:end1 ref="Sas1" />
+   <sc:end2>
+    <sc:Property>
+     <sc:id>Tas1</sc:id>
+     <sc:cardinality>0..*</sc:cardinality>
+     <sc:isNavigable>false</sc:isNavigable>
+     <sc:sequenceNumber>1</sc:sequenceNumber>
+     <sc:typeId>C2</sc:typeId>
+     <sc:typeName>ArealressursFlate</sc:typeName>
+     <sc:isAttribute>false</sc:isAttribute>
+     <sc:inClassId>C3</sc:inClassId>
+     <sc:associationId>as1</sc:associationId>
+    </sc:Property>
+   </sc:end2>
+  </sc:Association>
+ </sc:associations>
+</sc:Model>

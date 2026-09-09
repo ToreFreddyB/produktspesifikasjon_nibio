@@ -1,0 +1,75 @@
+@startuml
+' For wide diagrams, render with: plantuml -DPLANTUML_LIMIT_SIZE=16384 ...
+' The 'scale max' directive below caps the rendered output to prevent the
+' default PlantUML 4096px size limit from cropping the diagram.
+scale max 4000*4000
+
+title Arealressurskart - AR50 - UML-modell - Objekttyper
+
+skinparam backgroundColor #F5F5F5
+skinparam shadowing false
+skinparam RoundCorner 6
+skinparam ArrowColor #6C8198
+skinparam wrapWidth 200
+skinparam class {
+  BackgroundColor #FBF2E8
+  BorderColor #9C8578
+  FontColor #2D201A
+  HeaderBackgroundColor #EFE1D6
+  HeaderFontColor #2D201A
+  AttributeIconSize 0
+}
+skinparam note {
+  BackgroundColor #FFFFFF
+  BorderColor #6C8198
+  FontColor #2D201A
+}
+skinparam stereotypeCBackgroundColor #EAD9CE
+skinparam stereotypeCBorderColor #9C8578
+skinparam stereotypeCFontColor #2D201A
+
+package "Objekttyper" {
+
+  abstract class Fellesegenskaper <<featureType>> {
+    + identifikasjon [1] : Identifikasjon
+    + informasjon [1] : CharacterString
+    + kopidata [1] : Kopidata
+    + kvalitet [1] : Posisjonskvalitet
+    + oppdateringsdato [1] : Date
+  }
+
+  class ArealressursFlate <<featureType>> {
+    + område [1] : Flate
+    + arealtype [1] : ArealressursArealtype
+    + skogbonitet [1] : ArealressursSkogbonitet
+    + treslag [1] : ArealressursTreslag
+    + jordbruk [1] : ArealressursJordbruk
+    + vegetasjonsdekke [1] : ArealressursVegetasjonsdekke
+    + kartstandard [1] : ArealressursKartstandard
+  }
+
+  class ArealressursGrense <<featureType>> {
+    + grense [1] : Kurve
+  }
+
+  class Identifikasjon <<dataType>> {
+    + lokalId [1] : CharacterString
+    + navnerom [1] : CharacterString
+  }
+
+  class Kopidata <<dataType>> {
+    + områdeId [1] : Integer
+    + originalDatavert [1] : CharacterString
+    + kopidato [1] : Date
+  }
+
+  class Posisjonskvalitet <<dataType>> {
+    + målemetode [1] : Målemetode
+  }
+}
+
+  Fellesegenskaper <|-- ArealressursFlate
+  ArealressursFlate --> ArealressursGrense : avgrensning [1..*]
+  Fellesegenskaper <|-- ArealressursGrense
+
+@enduml
