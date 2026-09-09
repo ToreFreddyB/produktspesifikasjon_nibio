@@ -1,0 +1,10 @@
+metadataId: 4bc2d1e0-f693-4bf2-820d-c11830d849a3
+output_directory: produktspesifikasjon
+product_slug: arealressurskart_ar50
+updated: '2026-09-09'
+outputs: geopackage,xsd,odcs
+scopes:
+- name: UML-modell
+  url: https://sosi.geonorge.no/svn/SOSI/SOSI%20Del%203/Skog%20og%20landskap/ProduktspesifikasjonAR50-20260701.xml
+  generator: xmi
+  description: ''
