@@ -1,0 +1,338 @@
+{
+  "overview": "Denne produktspesifikasjonen er autogenerert fra metadata i Geonorge og datamodell fra SOSI modellregister og/eller OGC API Features. Noe ekstra informasjon kan ha blitt lagt til gjennom manuell prosess. Produktspesifikasjonen er i henhold til standarden: 'Geografisk informasjon - Dataproduktspesifikasjoner' (ISO19131:2022)",
+  "title": "Arealressurskart - AR50",
+  "format": "text/html",
+  "date": {
+    "creation": "2007-05-02",
+    "revision": "2026-03-16"
+  },
+  "language": "nor",
+  "contact": {
+    "individualName": "Tove Vaaje-Kolstad",
+    "organizationName": "Norsk institutt for bioøkonomi",
+    "logo": "https://register.geonorge.no/data/organizations/988983837_NIBIO_liten.jpg",
+    "electronicMailAddress": "gisdrift@nibio.no",
+    "role": "owner"
+  },
+  "identificationSection": {
+    "title": "Arealressurskart - AR50",
+    "abstract": "AR50 er et landsdekkende arealressurskart som viser Norges arealressurser i en mer forenklet og grov skala enn FKB-AR5. Datasettet er tilpasset målestokk fra 1:20 000 til 1:100 000, og gir oversiktlig informasjon om arealtyper på regionalt og nasjonalt nivå.\n\nKartet er i hovedsak basert på generalisering av FKB-AR5 under tregrensen, kombinert med tolkning av satellittbilder over tregrensen. Resultatet er et heldekkende kart som gir oversikt over arealressursene i hele landet. \n\nOmråder klassifisert som Åpen fastmark eller Ikke kartlagt i FKB-AR5 suppleres med data fra N50 Kartdata og vegetasjonsdekke fra AR-FJELL for å redusere arealer som klassifiseres som snaumark i AR50. Det vil likevel fortsatt gjenstå arealer klassifisert som Snaumark.",
+    "purpose": {
+      "summary": "Formålet med AR50 er å gi en forenklet og tilgjengelig oversikt over Norges arealressurser, tilpasset bruk i mindre målestokker og i sammenhenger der detaljeringsnivået i FKB-AR5 er for høyt.\n\nDatasettet skal gjøre det enklere å visualisere og analysere arealressurser på tvers av større geografiske områder, og gi et felles grunnlag for oversikt og sammenstilling av arealinformasjon.",
+      "useCase": {
+        "name": "Bruksområde",
+        "summary": "AR50 brukes blant annet til:\n* visualisering av arealressurser i temakart og kartpresentasjoner\n* analyser på regionalt og nasjonalt nivå\n* grunnlag i overordnet planlegging, for eksempel kommuneplan, landbruksplan og arbeid med kjerneområder landbruk\n\nAR50 er utviklet for oversiktsformål og egner seg best når det er behov for et forenklet arealressurskart eller analyser på regionalt og nasjonalt nivå. AR50 brukes ofte der det ikke er behov for den detaljerte informasjonen som finnes i FKB-AR5, eller der datamengde og ytelse er viktig. \n\nPå grunn av generalisering er datasettet ikke egnet til detaljert saksbehandling eller vurderinger på eiendomsnivå. For slike formål, og for produksjon av arealstatistikk, bør man som hovedregel bruke FKB-AR5. AR50 egner seg heller ikke til analyser av endringer over tid, siden datasettet ikke oppdateres årlig og bygger på kildedata med ulik oppdateringsfrekvens. Endringer mellom versjoner gjenspeiler i stor grad forbedringer i datagrunnlaget, og ikke nødvendigvis reelle endringer i arealbruk."
+      }
+    },
+    "topicCategory": [
+      "Landbruk og havbruk"
+    ],
+    "spatialRepresentationType": "Vektor",
+    "spatialResolution": {
+      "equivalentScale": "Fra 1:20 000 til 1:100 000"
+    },
+    "supplementalInformation": "Datasettet viser arealfigurer (flater) med egenskapene (beskrevet i egne temaartikler på produktsiden):\n* arealtype  (ARTYPE)\n* jordbruksareal (ARJORDBRUK)\n* treslag (ARTRESLAG)\n* skogbonitet (ARSKOGBON) \n* snaumark (ARVEGET)\n\nAR50 har god dekning, men lavere detaljnivå enn kildedataene. Små arealer under 15 dekar vises ikke som egne flater, men er slått sammen med omkringliggende arealer. Arealfigurer i nedlastede datasett er klippet til kommunegrenser. For romlige analyser og fremstilling av arealstatistikk anbefales det at man bruker FKB-AR5. I romlige analyser og arealstatistikk på internasjonalt nivå bør Corine Landcover brukes.\n\nFor riktige arealtall skal egenskapen area_c brukes, her er arealet beregnet etter evt. klipping. Egenskapen areal inneholder areal-verdien på hele figurer i vår sømløse original-database som nedlastingen er hentet fra. Det kan også være små forskjeller mellom area_c og areal selv om figurene i uttrekket ikke er blitt delt/klippet. Dette skyldes avrundingsforskjeller og transformasjon mellom forskjellige koordinatsystem.\n\nLes mer på produktsiden hos NIBIO, og se særlig temaartiklene for en grundigere innføring i datasettet!",
+    "uniqueId": "4bc2d1e0-f693-4bf2-820d-c11830d849a3",
+    "keyword": [
+      "arealressurs",
+      "arealtype",
+      "bonitet",
+      "skogbonitet",
+      "treslag",
+      "snaumark",
+      "jordbruksareal",
+      "AR50",
+      "Norge",
+      "Arealdekke",
+      "Norge digitalt",
+      "Åpne data",
+      "modellbaserteVegprosjekter",
+      "fellesDatakatalog",
+      "Det offentlige kartgrunnlaget",
+      "Basis geodata",
+      "Landbruk",
+      "Natur"
+    ],
+    "restriction": {
+      "legalConstraints": {
+        "accessConstraints": "Åpne data",
+        "useConstraints": "Lisens",
+        "license": "Norsk lisens for offentlige data (NLOD)",
+        "licenseUrl": "http://data.norge.no/nlod/no/1.0"
+      },
+      "securityConstraints": {
+        "classification": "Ugradert"
+      }
+    },
+    "contact": [
+      {
+        "individualName": "Tove Vaaje-Kolstad",
+        "organizationName": "Norsk institutt for bioøkonomi",
+        "electronicMailAddress": "gisdrift@nibio.no",
+        "role": "owner"
+      },
+      {
+        "individualName": "Maria Oldeman Lund",
+        "organizationName": "Norsk institutt for bioøkonomi",
+        "electronicMailAddress": "gisdrift@nibio.no",
+        "role": "pointOfContact"
+      },
+      {
+        "individualName": "Ingvild Nystuen",
+        "organizationName": "Norsk institutt for bioøkonomi",
+        "electronicMailAddress": "gisdrift@nibio.no",
+        "role": "publisher"
+      }
+    ],
+    "maintenance": "Ujevnt",
+    "extent": {
+      "geographicElement": {
+        "westBoundLongitude": "2.0",
+        "eastBoundLongitude": "33.0",
+        "southBoundLatitude": "57.0",
+        "northBoundLatitude": "72.0"
+      },
+      "temporalElement": {
+        "timePeriod": {
+          "beginPosition": "2007-05-02",
+          "endPosition": "2026-03-16"
+        }
+      }
+    },
+    "date": {
+      "creation": "2007-05-02",
+      "publication": "2007-05-02",
+      "revision": "2026-03-16"
+    },
+    "language": "nor"
+  },
+  "scopeSection": [
+    {
+      "specificationScope": {
+        "scopeIdentification": "Hele datasettet",
+        "level": "dataset",
+        "levelDescription": "Gjelder hele datasettet. Hvis omfang ikke er oppgitt under en overskrift, gjelder teksten for hele datasettet og alle leveranser"
+      }
+    },
+    {
+      "specificationScope": {
+        "scopeIdentification": "UML-modell",
+        "level": "dataset"
+      }
+    }
+  ],
+  "referenceSystemSection": {
+    "spatialReferenceSystem": [
+      {
+        "code": "EPSG:4258",
+        "name": "EUREF 89 Geografisk (ETRS 89) 2d"
+      },
+      {
+        "code": "EPSG:25832",
+        "name": "EUREF89 UTM sone 32, 2d"
+      },
+      {
+        "code": "EPSG:25835",
+        "name": "EUREF89 UTM sone 35, 2d"
+      },
+      {
+        "code": "EPSG:25833",
+        "name": "EUREF89 UTM sone 33, 2d"
+      },
+      {
+        "code": "EPSG:4258",
+        "name": "EUREF 89 Geografisk (ETRS 89) 2d"
+      }
+    ]
+  },
+  "dataQualitySection": {
+    "scope": {
+      "level": "dataset"
+    },
+    "report": [
+      {
+        "nameOfMeasure": "SOSI-produktspesifikasjon: AR50",
+        "measureDescription": "Dataene er ikke vurdert iht produktspesifikasjonen",
+        "descriptiveResult": "Dataene er ikke vurdert iht produktspesifikasjonen"
+      },
+      {
+        "nameOfMeasure": "Sosi applikasjonsskjema",
+        "measureDescription": "SOSI-filer er ikke vurdert i henhold til applikasjonsskjema",
+        "descriptiveResult": "SOSI-filer er ikke vurdert i henhold til applikasjonsskjema"
+      },
+      {
+        "nameOfMeasure": "Sosi applikasjonsskjema",
+        "measureDescription": "GML-filer er ikke vurdert i henhold til applikasjonsskjema",
+        "descriptiveResult": "GML-filer er ikke vurdert i henhold til applikasjonsskjema"
+      },
+      {
+        "nameOfMeasure": "Prosentvis oppfyllelse av FAIR-prinsipper",
+        "measureDescription": "Angir fullstendighet i forhold til krav fra FAIR-prinsippene (The FAIR Guiding Principles for scientific data management and stewardship)",
+        "result": "91"
+      },
+      {
+        "nameOfMeasure": "FAIR",
+        "result": "Prosentvis oppfyllelse av FAIR-prinsipper: 91%"
+      }
+    ]
+  },
+  "maintenanceSection": {
+    "maintenanceAndUpdateFrequency": "Ujevnt",
+    "maintenanceAndUpdateStatement": "Fullført"
+  },
+  "dataCaptureAndProductionSection": {
+    "DataAcquisitionAndProcessing": {
+      "processStep": [
+        {
+          "description": "AR50 oppdateres om lag hvert tredje år, og produseres helautomatisk gjennom en regelbasert prosess der flere datasett sammenstilles. AR50 fra mars 2025 er nyeste versjon og er basert på AR5-årsversjon 2024, N50 Kartdata og ARFJELL2 (2021).\n\nFørste versjon av AR50 ble etablert i 2010, basert på FKB-AR5 og N50 Kartdata per 31.12.2010, samt satellittdata fra perioden 1994–2006 (IMAGE2000). Datasettet er senere oppdatert i nye versjoner i 2013, 2016 og 2021, basert på oppdaterte versjoner av FKB-AR5 og N50 Kartdata, samt AR-FJELL2 (produsert fra satellittbilder fra Sentinel 2-satellitten)."
+        }
+      ]
+    }
+  },
+  "portrayal": {
+    "name": "Tegneregler",
+    "linkage": "https://register.geonorge.no/tegneregler/ar50"
+  },
+  "deliverySection": [
+    {
+      "delivery": {
+        "deliveryMedium": {
+          "unitsOfDelivery": "fylkesvis, kommunevis",
+          "deliveryMediumName": "Geonorge nedlastning",
+          "deliveryService": {
+            "serviceEndpoint": "https://kart8.nibio.no/api/capabilities/",
+            "serviceProperty": {
+              "type": "Geonorge nedlastning",
+              "value": "GEONORGE:DOWNLOAD"
+            }
+          }
+        },
+        "deliveryFormat": [
+          {
+            "formatName": "SOSI"
+          },
+          {
+            "formatName": "GML"
+          },
+          {
+            "formatName": "FGDB"
+          }
+        ]
+      }
+    },
+    {
+      "delivery": {
+        "deliveryMedium": {
+          "unitsOfDelivery": "fylkesvis, kommunevis",
+          "deliveryMediumName": "Atom Feed",
+          "deliveryService": {
+            "serviceEndpoint": "https://kartkatalog.nibio.no/api/atom/4bc2d1e0-f693-4bf2-820d-c11830d849a3",
+            "serviceProperty": {
+              "type": "Atom Feed",
+              "value": "W3C:AtomFeed"
+            }
+          }
+        },
+        "deliveryFormat": [
+          {
+            "formatName": "GDB"
+          },
+          {
+            "formatName": "GML"
+          },
+          {
+            "formatName": "SOSI"
+          }
+        ]
+      }
+    },
+    {
+      "delivery": {
+        "deliveryMedium": {
+          "deliveryMediumName": "Arealressurskart - AR50 - WMS",
+          "deliveryService": {
+            "serviceEndpoint": "https://wms.nibio.no/cgi-bin/ar50_2?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities",
+            "serviceProperty": {
+              "type": "Arealressurskart - AR50 - WMS",
+              "value": "Tjenestelag"
+            }
+          }
+        },
+        "deliveryFormat": [
+          {
+            "formatName": "WMS",
+            "version": "1.3.0"
+          }
+        ],
+        "deliveryScope": "Tjeneste"
+      }
+    },
+    {
+      "delivery": {
+        "deliveryMedium": {
+          "deliveryMediumName": "GeoPackage: uml-modell",
+          "deliveryService": {
+            "serviceEndpoint": "https://raw.githubusercontent.com/ToreFreddyB/produktspesifikasjon_nibio/main/produktspesifikasjon/arealressurskart-ar50/uml-modell/uml-modell.gpkg",
+            "serviceProperty": {
+              "type": "Fil",
+              "value": "Nedlasting"
+            }
+          }
+        },
+        "deliveryFormat": [
+          {
+            "formatName": "GPKG"
+          }
+        ]
+      }
+    },
+    {
+      "delivery": {
+        "deliveryMedium": {
+          "deliveryMediumName": "GML/XSD-skjema: uml-modell",
+          "deliveryService": {
+            "serviceEndpoint": "https://raw.githubusercontent.com/ToreFreddyB/produktspesifikasjon_nibio/main/produktspesifikasjon/arealressurskart-ar50/uml-modell/schema/xsd/INPUT/uml-modell.xsd",
+            "serviceProperty": {
+              "type": "Fil",
+              "value": "Nedlasting"
+            }
+          }
+        },
+        "deliveryFormat": [
+          {
+            "formatName": "XSD"
+          }
+        ]
+      }
+    }
+  ],
+  "metadataSection": {
+    "metadataStandard": "ISO19115",
+    "metadataStandardVersion": "2003",
+    "metadataDate": "2026-09-08",
+    "language": "nor",
+    "contact": {
+      "organizationName": "Norsk institutt for bioøkonomi",
+      "individualName": "Maria Oldeman Lund",
+      "logo": "https://register.geonorge.no/data/organizations/988983837_NIBIO_liten.jpg",
+      "electronicMailAddress": "gisdrift@nibio.no",
+      "role": "pointOfContact"
+    },
+    "metadataIdentifier": {
+      "authority": "Geonorge",
+      "code": "4bc2d1e0-f693-4bf2-820d-c11830d849a3",
+      "codeSpace": "https://kartkatalog.geonorge.no/metadata/",
+      "metadataLinkage": "https://kartkatalog.geonorge.no/metadata/4bc2d1e0-f693-4bf2-820d-c11830d849a3"
+    }
+  },
+  "additionalReferences": [
+    {
+      "title": "Produktark",
+      "href": "https://register.geonorge.no/produktark/ar50"
+    },
+    {
+      "title": "Produktside",
+      "href": "https://nibio.no/tema/jord/arealressurser/ar50"
+    }
+  ]
+}
