@@ -1,0 +1,65 @@
+@startuml
+' For wide diagrams, render with: plantuml -DPLANTUML_LIMIT_SIZE=16384 ...
+' The 'scale max' directive below caps the rendered output to prevent the
+' default PlantUML 4096px size limit from cropping the diagram.
+scale max 4000*4000
+
+title Nasjonalt grunnkart for arealanalyse - UML-modell - Objekttyper
+
+skinparam backgroundColor #F5F5F5
+skinparam shadowing false
+skinparam RoundCorner 6
+skinparam ArrowColor #6C8198
+skinparam wrapWidth 200
+skinparam class {
+  BackgroundColor #FBF2E8
+  BorderColor #9C8578
+  FontColor #2D201A
+  HeaderBackgroundColor #EFE1D6
+  HeaderFontColor #2D201A
+  AttributeIconSize 0
+}
+skinparam note {
+  BackgroundColor #FFFFFF
+  BorderColor #6C8198
+  FontColor #2D201A
+}
+skinparam stereotypeCBackgroundColor #EAD9CE
+skinparam stereotypeCBorderColor #9C8578
+skinparam stereotypeCFontColor #2D201A
+
+package "Objekttyper" {
+
+  class GrunnkartFlate <<featureType>> {
+    + område [1] : GM_Surface
+    + arealdekkeNiva1 [1] : ArealdekkeNiva1
+    + arealdekkeNiva2 [1] : ArealdekkeNiva2
+    + arealdekkeKode [1] : ArealdekkeKode
+    + grunnforhold [1] : Grunnforhold
+    + grunnforholdKode [1] : GrunnforholdKode
+    + skogbonitet [1] : Skogbonitet
+    + skogbonitetKode [1] : SkogbonitetKode
+    + arealbrukLandHovedklasse [1] : ArealbrukLandHovedklasse
+    + arealbrukLandUnderklasse [1] : ArealbrukLandUnderklasse
+    + arealbrukLandKode [1] : ArealbrukLandKode
+    + arealbrukHav [1] : ArealbrukHav
+    + arealbrukHavKode [1] : ArealbrukHavKode
+    + okosystemtypeNiva1 [1] : OkosystemtypeNiva1
+    + okosystemtypeNiva2 [1] : OkosystemtypeNiva2
+    + okosystemtypeNiva3 [1] : OkosystemtypeNiva3
+    + okosystemtypeKode [1] : OkosystemtypeKode
+    + grunnkartKilde [1] : GrunnkartKilde
+    + arealbrukKilde [1] : ArealbrukKilde
+    + kommunenummer [1] : Kommunenummer
+    + identifikasjon [1] : Identifikasjon
+    + oppdateringsdato [0..1] : Date
+  }
+
+  class Identifikasjon <<dataType>> {
+    + lokalId [1] : CharacterString
+    + navnerom [1] : CharacterString
+    + versjonId [0..1] : CharacterString
+  }
+}
+
+@enduml
