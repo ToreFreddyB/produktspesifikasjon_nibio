@@ -1,0 +1,10 @@
+metadataId: 28c28e3a-d88f-4a34-8c60-5efe6d56a44d
+output_directory: produktspesifikasjon
+product_slug: nasjonalt_grunnkart_for_arealanalyse
+updated: '2026-09-11'
+outputs: geopackage
+scopes:
+- name: UML-modell
+  url: https://sosi.geonorge.no/svn/SOSI/SOSI%20Del%203/Statens%20kartverk/NasjonaltGrunnkartForArealanalyse-20260101.xml
+  generator: xmi
+  description: ''
