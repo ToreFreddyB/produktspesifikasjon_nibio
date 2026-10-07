@@ -1,0 +1,264 @@
+{
+  "overview": "Denne produktspesifikasjonen er autogenerert fra metadata i Geonorge og datamodell fra SOSI modellregister og/eller OGC API Features. Noe ekstra informasjon kan ha blitt lagt til gjennom manuell prosess. Produktspesifikasjonen er i henhold til standarden: 'Geografisk informasjon - Dataproduktspesifikasjoner' (ISO19131:2022)",
+  "title": "Kart over grå arealer",
+  "format": "text/html",
+  "date": {
+    "creation": "2025-11-24",
+    "revision": "2026-04-10"
+  },
+  "language": "nor",
+  "contact": {
+    "individualName": "Magnhild Sletten",
+    "organizationName": "Miljødirektoratet",
+    "logo": "https://register.geonorge.no/data/organizations/999601391_miljodirektoratet_liten.png",
+    "electronicMailAddress": "magnhild.sletten@miljodir.no",
+    "role": "owner"
+  },
+  "identificationSection": {
+    "title": "Kart over grå arealer",
+    "abstract": "Kart over grå arealet er utviklet i samarbeidet mellom Miljødirektoratet, Kartverket, NIBIO og SSB.\n\nKartet er landsdekkende og viser grå arealer i henhold til Kommunal- og distriktsdepartementet sin definisjon;\n«Arealer som allerede er tatt i bruk eller sterkt påvirket av menneskelig bygge- og anleggsaktivitet, inkludert bebyggelse, konstruksjoner, permanente overflater og tilhørende arealer.»\n\nRapport kan leses her\nhttps://dokument.geonorge.no/nasjonale-standarder-og-veiledere/dokumentasjon-og-metode/kart-over-gr%C3%A5-arealer-sluttrapport/1/kart-over-gr%C3%A5-arealer-sluttrapport.pdf\n\nOversikt over arealklasser som er med i kartet kan leses her\nhttps://register.geonorge.no/nasjonale-standarder-og-veiledere/dokumentasjon-og-metode/kart-over-gr%C3%A5-arealer-utvalg-fra-grunnkartet",
+    "purpose": {
+      "summary": "Verktøy for planlegging \nKartet skal kunne brukes som et verktøy for planlegging og bidra til å redusere nedbygging av natur - og jordbruksarealer, ved å synliggjøre allerede opparbeidede arealer.\n\nKartet er nå tilgjengelig og skal testes om det gir ønsket kunnskapsgrunnlag.",
+      "useCase": {
+        "name": "Bruksområde",
+        "summary": "Lett tilgjengelige oversikter over grå arealer i Norge vil være et viktig kunnskapsgrunnlag for å kunne realisere en mer arealgjerrig arealpolitikk gjennom fortetting og transformasjon, før nye utbyggingsområder tas i bruk."
+      }
+    },
+    "spatialRepresentationType": "Vektor",
+    "uniqueId": "https://data.geonorge.no/sosi/arealbruk/kart_over_gra_arealer",
+    "keyword": [
+      "Det offentlige kartgrunnlaget",
+      "geodataloven",
+      "arealplanerPBL",
+      "Natur"
+    ],
+    "restriction": {
+      "legalConstraints": {
+        "accessConstraints": "Norge digitalt begrenset",
+        "useConstraints": "Lisens",
+        "license": "Norge digitalt-lisens",
+        "licenseUrl": "https://www.kartverket.no/geodataarbeid/norge-digitalt/partsinformasjon/avtaler-og-vilkar/norge-digitalt-lisens"
+      }
+    },
+    "contact": [
+      {
+        "individualName": "Magnhild Sletten",
+        "organizationName": "Miljødirektoratet",
+        "electronicMailAddress": "magnhild.sletten@miljodir.no",
+        "role": "owner"
+      },
+      {
+        "individualName": "Bernt Audun Strømsli",
+        "organizationName": "Kartverket",
+        "electronicMailAddress": "bernt.audun.stromsli@kartverket.no",
+        "role": "pointOfContact"
+      },
+      {
+        "organizationName": "Norsk institutt for bioøkonomi",
+        "electronicMailAddress": "gisdrift@nibio.no",
+        "role": "publisher"
+      }
+    ],
+    "maintenance": "Ikke planlagt",
+    "extent": {
+      "geographicElement": {
+        "westBoundLongitude": "2.0",
+        "eastBoundLongitude": "33.0",
+        "southBoundLatitude": "57.0",
+        "northBoundLatitude": "72.0"
+      },
+      "temporalElement": {
+        "timePeriod": {
+          "beginPosition": "2025-11-24",
+          "endPosition": "2026-04-10"
+        }
+      }
+    },
+    "date": {
+      "creation": "2025-11-24",
+      "publication": "2025-11-24",
+      "revision": "2026-04-10"
+    },
+    "language": "nor"
+  },
+  "scopeSection": [
+    {
+      "specificationScope": {
+        "scopeIdentification": "Hele datasettet",
+        "level": "dataset",
+        "levelDescription": "Gjelder hele datasettet. Hvis omfang ikke er oppgitt under en overskrift, gjelder teksten for hele datasettet og alle leveranser"
+      }
+    },
+    {
+      "specificationScope": {
+        "scopeIdentification": "UML-modell",
+        "level": "dataset"
+      }
+    }
+  ],
+  "referenceSystemSection": {
+    "spatialReferenceSystem": [
+      {
+        "code": "EPSG:25833",
+        "name": "EUREF89 UTM sone 33, 2d"
+      },
+      {
+        "code": "EPSG:25833",
+        "name": "EUREF89 UTM sone 33, 2d"
+      }
+    ]
+  },
+  "dataQualitySection": {
+    "scope": {
+      "level": "dataset"
+    },
+    "report": [
+      {
+        "nameOfMeasure": "Prosentvis oppfyllelse av FAIR-prinsipper",
+        "measureDescription": "Angir fullstendighet i forhold til krav fra FAIR-prinsippene (The FAIR Guiding Principles for scientific data management and stewardship)",
+        "result": "81"
+      },
+      {
+        "nameOfMeasure": "Prosentvis dekning i forhold til datasettets utstrekning",
+        "measureDescription": "Datasettets faktiske kartlagte areal i forhold til datasettets spesifiserte utstrekning",
+        "result": "100"
+      },
+      {
+        "nameOfMeasure": "Prosentvis oppfyllelse av FAIR-prinsipper",
+        "measureDescription": "Angir fullstendighet i forhold til krav fra FAIR-prinsippene (The FAIR Guiding Principles for scientific data management and stewardship)",
+        "result": "81"
+      }
+    ]
+  },
+  "maintenanceSection": {
+    "maintenanceAndUpdateFrequency": "Ikke planlagt",
+    "maintenanceAndUpdateStatement": "Under arbeid"
+  },
+  "portrayal": {
+    "name": "Tegneregler",
+    "linkage": "https://register.geonorge.no/tegneregler/kart-over-grå-arealer"
+  },
+  "deliverySection": [
+    {
+      "delivery": {
+        "deliveryMedium": {
+          "unitsOfDelivery": "fylkesvis, kommunevis, landsfiler",
+          "deliveryMediumName": "Geonorge nedlastning",
+          "deliveryService": {
+            "serviceEndpoint": "https://nedlasting.geonorge.no/api/capabilities/c5f09d79-1546-495c-8b36-91efd4008bd7",
+            "serviceProperty": {
+              "type": "Geonorge nedlastning",
+              "value": "GEONORGE:DOWNLOAD"
+            }
+          }
+        },
+        "deliveryFormat": [
+          {
+            "formatName": "GeoPackage"
+          }
+        ]
+      }
+    },
+    {
+      "delivery": {
+        "deliveryMedium": {
+          "unitsOfDelivery": "fylkesvis, kommunevis, landsfiler",
+          "deliveryMediumName": "Atom Feed",
+          "deliveryService": {
+            "serviceEndpoint": "http://nedlasting.geonorge.no/geonorge/ATOM-feeds/KartOverGraArealer_AtomFeedGeoPackage.xml",
+            "serviceProperty": {
+              "type": "Atom Feed",
+              "value": "W3C:AtomFeed"
+            }
+          }
+        },
+        "deliveryFormat": [
+          {
+            "formatName": "GeoPackage"
+          }
+        ]
+      }
+    },
+    {
+      "delivery": {
+        "deliveryMedium": {
+          "deliveryMediumName": "Kart over grå arealer WMS (Testversjon 1)",
+          "deliveryService": {
+            "serviceEndpoint": "https://wms.nibio.no/cgi-bin/graastruktur?service=wms&request=GetCapabilities",
+            "serviceProperty": {
+              "type": "Kart over grå arealer WMS (Testversjon 1)",
+              "value": "WMS-tjeneste"
+            }
+          }
+        },
+        "deliveryFormat": [
+          {
+            "formatName": "[{}]"
+          }
+        ],
+        "deliveryScope": "Tjeneste"
+      }
+    },
+    {
+      "delivery": {
+        "deliveryMedium": {
+          "deliveryMediumName": "GeoPackage: uml-modell",
+          "deliveryService": {
+            "serviceEndpoint": "https://raw.githubusercontent.com/ToreFreddyB/produktspesifikasjon_nibio/main/produktspesifikasjon/kart-over-gra-arealer/uml-modell/uml-modell.gpkg",
+            "serviceProperty": {
+              "type": "Fil",
+              "value": "Nedlasting"
+            }
+          }
+        },
+        "deliveryFormat": [
+          {
+            "formatName": "GPKG"
+          }
+        ]
+      }
+    }
+  ],
+  "metadataSection": {
+    "metadataStandard": "ISO19115",
+    "metadataStandardVersion": "2003",
+    "metadataDate": "2026-10-06",
+    "language": "nor",
+    "contact": {
+      "organizationName": "Kartverket",
+      "individualName": "Bernt Audun Strømsli",
+      "logo": "https://register.geonorge.no/data/organizations/999601391_miljodirektoratet_liten.png",
+      "electronicMailAddress": "bernt.audun.stromsli@kartverket.no",
+      "role": "pointOfContact"
+    },
+    "metadataIdentifier": {
+      "authority": "Geonorge",
+      "code": "c5f09d79-1546-495c-8b36-91efd4008bd7",
+      "codeSpace": "https://kartkatalog.geonorge.no/metadata/",
+      "metadataLinkage": "https://kartkatalog.geonorge.no/metadata/c5f09d79-1546-495c-8b36-91efd4008bd7"
+    }
+  },
+  "additionalReferences": [
+    {
+      "title": "Produktark",
+      "href": "https://register.geonorge.no/produktark/kart-over-grå-arealer"
+    }
+  ],
+  "chapterAutofill": {
+    "om_spesifikasjonen": 9,
+    "om_produktet": 106,
+    "formaal": 41,
+    "bruksomraade": 31,
+    "omfang": 24,
+    "datainnhold_og_struktur": 0,
+    "referansesystem": 12,
+    "datakvalitet": 65,
+    "datafangst_og_produksjon": 0,
+    "vedlikehold": 4,
+    "presentasjon": 2,
+    "leveranse": 44,
+    "metadata": 15,
+    "tilleggsinformasjon": 2,
+    "datamodell": 681
+  }
+}
