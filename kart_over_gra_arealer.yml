@@ -1,0 +1,10 @@
+metadataId: c5f09d79-1546-495c-8b36-91efd4008bd7
+output_directory: produktspesifikasjon
+product_slug: kart_over_gra_arealer
+updated: '2026-10-07'
+outputs: geopackage
+scopes:
+- name: UML-modell
+  url: https://sosi.geonorge.no/svn/SOSI/SOSI%20Del%203/Statens%20kartverk/KartOverGr%c3%a5Arealer-20260101.xml
+  generator: xmi
+  description: ''
