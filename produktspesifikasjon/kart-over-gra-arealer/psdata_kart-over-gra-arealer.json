@@ -222,7 +222,7 @@
   "metadataSection": {
     "metadataStandard": "ISO19115",
     "metadataStandardVersion": "2003",
-    "metadataDate": "2026-10-06",
+    "metadataDate": "2026-10-07",
     "language": "nor",
     "contact": {
       "organizationName": "Kartverket",
@@ -259,6 +259,6 @@
     "leveranse": 44,
     "metadata": 15,
     "tilleggsinformasjon": 2,
-    "datamodell": 681
+    "datamodell": 690
   }
 }

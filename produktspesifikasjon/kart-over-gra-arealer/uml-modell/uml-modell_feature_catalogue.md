@@ -295,7 +295,11 @@ Egenskaper
     </tr>
     <tr>
       <th scope="row">Type:</th>
-      <td>CharacterString</td>
+      <td>ArealbrukHav</td>
+    </tr>
+    <tr>
+      <th scope="row">Tillatte verdier:</th>
+      <td>- Kodeliste: <a href="https://register.geonorge.no/sosi-kodelister/temadata/ssbarealbruk/ssbarealbrukhav">https://register.geonorge.no/sosi-kodelister/temadata/ssbarealbruk/ssbarealbrukhav</a></td>
     </tr>
   </tbody>
 </table>
@@ -345,7 +349,7 @@ Egenskaper
     </tr>
     <tr>
       <th scope="row">Tillatte verdier:</th>
-      <td>- Kodeliste: <a href="https://register.geonorge.no/sosi-kodelister/temadata/grunnkart-arealanalyse/okosystemtype1">https://register.geonorge.no/sosi-kodelister/temadata/grunnkart-arealanalyse/okosystemtype1</a></td>
+      <td>- Kodeliste: <a href="https://register.geonorge.no/sosi-kodelister/temadata/grunnkart-arealanalyse/okosystemtypeniva1">https://register.geonorge.no/sosi-kodelister/temadata/grunnkart-arealanalyse/okosystemtypeniva1</a></td>
     </tr>
   </tbody>
 </table>
@@ -370,7 +374,7 @@ Egenskaper
     </tr>
     <tr>
       <th scope="row">Tillatte verdier:</th>
-      <td>- Kodeliste: <a href="https://register.geonorge.no/sosi-kodelister/temadata/grunnkart-arealanalyse/okosystemtype2">https://register.geonorge.no/sosi-kodelister/temadata/grunnkart-arealanalyse/okosystemtype2</a></td>
+      <td>- Kodeliste: <a href="https://register.geonorge.no/sosi-kodelister/temadata/grunnkart-arealanalyse/okosystemtypeniva2">https://register.geonorge.no/sosi-kodelister/temadata/grunnkart-arealanalyse/okosystemtypeniva2</a></td>
     </tr>
   </tbody>
 </table>
@@ -395,7 +399,7 @@ Egenskaper
     </tr>
     <tr>
       <th scope="row">Tillatte verdier:</th>
-      <td>- Kodeliste: <a href="https://register.geonorge.no/sosi-kodelister/temadata/grunnkart-arealanalyse/okosystemtype3">https://register.geonorge.no/sosi-kodelister/temadata/grunnkart-arealanalyse/okosystemtype3</a></td>
+      <td>- Kodeliste: <a href="https://register.geonorge.no/sosi-kodelister/temadata/grunnkart-arealanalyse/okosystemtypeniva3">https://register.geonorge.no/sosi-kodelister/temadata/grunnkart-arealanalyse/okosystemtypeniva3</a></td>
     </tr>
   </tbody>
 </table>
@@ -1020,6 +1024,29 @@ Profilparametre i tagged values
   </tbody>
 </table>
 
+#### «CodeList» ArealbrukHav
+
+**Definisjon:** Klassifisering av stedbundet arealbruk i havområder.
+
+Profilparametre i tagged values
+
+<table class="feature-attribute-table">
+  <colgroup>
+    <col style="width: 35%;" />
+    <col style="width: 65%;" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th scope="row">asDictionary</th>
+      <td>true</td>
+    </tr>
+    <tr>
+      <th scope="row">codeList</th>
+      <td><a href="https://register.geonorge.no/sosi-kodelister/temadata/ssbarealbruk/ssbarealbrukhav">https://register.geonorge.no/sosi-kodelister/temadata/ssbarealbruk/ssbarealbrukhav</a></td>
+    </tr>
+  </tbody>
+</table>
+
 #### «CodeList» ArealbrukHavKode
 
 **Definisjon:** Standardisert tallkode for arealbruk i hav.
@@ -1061,7 +1088,7 @@ Profilparametre i tagged values
     </tr>
     <tr>
       <th scope="row">codeList</th>
-      <td><a href="https://register.geonorge.no/sosi-kodelister/temadata/grunnkart-arealanalyse/okosystemtype1">https://register.geonorge.no/sosi-kodelister/temadata/grunnkart-arealanalyse/okosystemtype1</a></td>
+      <td><a href="https://register.geonorge.no/sosi-kodelister/temadata/grunnkart-arealanalyse/okosystemtypeniva1">https://register.geonorge.no/sosi-kodelister/temadata/grunnkart-arealanalyse/okosystemtypeniva1</a></td>
     </tr>
   </tbody>
 </table>
@@ -1084,7 +1111,7 @@ Profilparametre i tagged values
     </tr>
     <tr>
       <th scope="row">codeList</th>
-      <td><a href="https://register.geonorge.no/sosi-kodelister/temadata/grunnkart-arealanalyse/okosystemtype2">https://register.geonorge.no/sosi-kodelister/temadata/grunnkart-arealanalyse/okosystemtype2</a></td>
+      <td><a href="https://register.geonorge.no/sosi-kodelister/temadata/grunnkart-arealanalyse/okosystemtypeniva2">https://register.geonorge.no/sosi-kodelister/temadata/grunnkart-arealanalyse/okosystemtypeniva2</a></td>
     </tr>
   </tbody>
 </table>
@@ -1107,7 +1134,7 @@ Profilparametre i tagged values
     </tr>
     <tr>
       <th scope="row">codeList</th>
-      <td><a href="https://register.geonorge.no/sosi-kodelister/temadata/grunnkart-arealanalyse/okosystemtype3">https://register.geonorge.no/sosi-kodelister/temadata/grunnkart-arealanalyse/okosystemtype3</a></td>
+      <td><a href="https://register.geonorge.no/sosi-kodelister/temadata/grunnkart-arealanalyse/okosystemtypeniva3">https://register.geonorge.no/sosi-kodelister/temadata/grunnkart-arealanalyse/okosystemtypeniva3</a></td>
     </tr>
   </tbody>
 </table>
