@@ -42,7 +42,7 @@ package "Objekttyper" {
     + arealbrukLandHovedklasse [1] : ArealbrukLandHovedklasse
     + arealbrukLandUnderklasse [1] : ArealbrukLandUnderklasse
     + arealbrukLandKode [1] : ArealbrukLandKode
-    + arealbrukHav [1] : CharacterString
+    + arealbrukHav [1] : ArealbrukHav
     + arealbrukHavKode [1] : ArealbrukHavKode
     + okosystemtypeNiva1 [1] : OkosystemtypeNiva1
     + okosystemtypeNiva2 [1] : OkosystemtypeNiva2

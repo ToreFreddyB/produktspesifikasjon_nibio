@@ -124,8 +124,14 @@
       },
       {
         "name": "arealbrukHav",
-        "type": "CharacterString",
-        "cardinality": "1"
+        "type": "ArealbrukHav",
+        "cardinality": "1",
+        "valueDomain": {
+          "kind": "codelist",
+          "definition": "Klassifisering av stedbundet arealbruk i havområder.",
+          "asDictionary": "true",
+          "codeList": "https://register.geonorge.no/sosi-kodelister/temadata/ssbarealbruk/ssbarealbrukhav"
+        }
       },
       {
         "name": "arealbrukHavKode",
@@ -146,7 +152,7 @@
           "kind": "codelist",
           "definition": "Økosystemklasse nivå 1 har 12 klasser, og deler kartet inn i hovedøkosystemer etter europeisk arealtypologi utviklet spesielt til bruk i naturregnskap (Eurostat)",
           "asDictionary": "true",
-          "codeList": "https://register.geonorge.no/sosi-kodelister/temadata/grunnkart-arealanalyse/okosystemtype1"
+          "codeList": "https://register.geonorge.no/sosi-kodelister/temadata/grunnkart-arealanalyse/okosystemtypeniva1"
         }
       },
       {
@@ -157,7 +163,7 @@
           "kind": "codelist",
           "definition": "Økosystemklasse nivå 2 gir en videre inndeling av de 12 klassene i nivå 1. Inndelingen følger europeisk arealtypologi utviklet spesielt til bruk i naturregnskap (Eurostat)",
           "asDictionary": "true",
-          "codeList": "https://register.geonorge.no/sosi-kodelister/temadata/grunnkart-arealanalyse/okosystemtype2"
+          "codeList": "https://register.geonorge.no/sosi-kodelister/temadata/grunnkart-arealanalyse/okosystemtypeniva2"
         }
       },
       {
@@ -168,7 +174,7 @@
           "kind": "codelist",
           "definition": "Økosystemklasse nivå 3 gir en videre inndeling av økosystemklasse 1 og 2. Inndelingen følger europeisk arealtypologi utviklet spesielt til bruk i naturregnskap (Eurostat)",
           "asDictionary": "true",
-          "codeList": "https://register.geonorge.no/sosi-kodelister/temadata/grunnkart-arealanalyse/okosystemtype3"
+          "codeList": "https://register.geonorge.no/sosi-kodelister/temadata/grunnkart-arealanalyse/okosystemtypeniva3"
         }
       },
       {
