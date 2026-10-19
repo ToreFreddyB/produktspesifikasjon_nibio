@@ -217,12 +217,69 @@
           }
         ]
       }
+    },
+    {
+      "delivery": {
+        "deliveryMedium": {
+          "deliveryMediumName": "PostGIS-skript: uml-modell.postgis",
+          "deliveryService": {
+            "serviceEndpoint": "https://raw.githubusercontent.com/ToreFreddyB/produktspesifikasjon_nibio/main/produktspesifikasjon/kart-over-gra-arealer/uml-modell/uml-modell.postgis.sql",
+            "serviceProperty": {
+              "type": "Fil",
+              "value": "Nedlasting"
+            }
+          }
+        },
+        "deliveryFormat": [
+          {
+            "formatName": "SQL"
+          }
+        ]
+      }
+    },
+    {
+      "delivery": {
+        "deliveryMedium": {
+          "deliveryMediumName": "GML/XSD-skjema: uml-modell",
+          "deliveryService": {
+            "serviceEndpoint": "https://raw.githubusercontent.com/ToreFreddyB/produktspesifikasjon_nibio/main/produktspesifikasjon/kart-over-gra-arealer/uml-modell/schema/xsd/INPUT/uml-modell.xsd",
+            "serviceProperty": {
+              "type": "Fil",
+              "value": "Nedlasting"
+            }
+          }
+        },
+        "deliveryFormat": [
+          {
+            "formatName": "XSD"
+          }
+        ]
+      }
+    },
+    {
+      "delivery": {
+        "deliveryMedium": {
+          "deliveryMediumName": "JSON Schema: uml-modell",
+          "deliveryService": {
+            "serviceEndpoint": "https://raw.githubusercontent.com/ToreFreddyB/produktspesifikasjon_nibio/main/produktspesifikasjon/kart-over-gra-arealer/uml-modell/schema/jsonschema/INPUT/umlmodell/uml-modell.json",
+            "serviceProperty": {
+              "type": "Fil",
+              "value": "Nedlasting"
+            }
+          }
+        },
+        "deliveryFormat": [
+          {
+            "formatName": "JSON Schema"
+          }
+        ]
+      }
     }
   ],
   "metadataSection": {
     "metadataStandard": "ISO19115",
     "metadataStandardVersion": "2003",
-    "metadataDate": "2026-10-07",
+    "metadataDate": "2026-10-18",
     "language": "nor",
     "contact": {
       "organizationName": "Kartverket",
@@ -256,7 +313,7 @@
     "datafangst_og_produksjon": 0,
     "vedlikehold": 4,
     "presentasjon": 2,
-    "leveranse": 44,
+    "leveranse": 64,
     "metadata": 15,
     "tilleggsinformasjon": 2,
     "datamodell": 690

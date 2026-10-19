@@ -1,0 +1,190 @@
+---
+id: uml_modell
+enabled: true
+providerType: FEATURE
+providerSubType: SQL
+nativeCrs:
+  code: 25833
+  forceAxisOrder: NONE
+nativeTimeZone: Europe/Oslo
+connectionInfo:
+  database: FIXME
+  host: FIXME
+  user: FIXME
+  password: FIXME-base64-encoded
+  schemas:
+  - public
+sourcePathDefaults:
+  primaryKey: objid
+  sortKey: objid
+types:
+  graarealflate:
+    sourcePath: /graarealflate
+    type: OBJECT
+    objectType: GraArealFlate
+    properties:
+      oid:
+        sourcePath: objid
+        type: INTEGER
+        role: ID
+      område:
+        sourcePath: område
+        type: GEOMETRY
+        role: PRIMARY_GEOMETRY
+        geometryType: POLYGON
+        constraints:
+          required: true
+      arealdekkeNiva1:
+        sourcePath: arealdekkeniva1
+        type: STRING
+        constraints:
+          codelist: ArealdekkeNiva1
+          required: true
+      arealdekkeNiva2:
+        sourcePath: arealdekkeniva2
+        type: STRING
+        constraints:
+          codelist: ArealdekkeNiva2
+          required: true
+      arealdekkeKode:
+        sourcePath: arealdekkekode
+        type: STRING
+        constraints:
+          codelist: ArealdekkeKode
+          required: true
+      grunnforhold:
+        sourcePath: grunnforhold
+        type: STRING
+        constraints:
+          codelist: Grunnforhold
+          required: true
+      grunnforholdKode:
+        sourcePath: grunnforholdkode
+        type: STRING
+        constraints:
+          codelist: GrunnforholdKode
+          required: true
+      skogbonitet:
+        sourcePath: skogbonitet
+        type: STRING
+        constraints:
+          codelist: Skogbonitet
+          required: true
+      skogbonitetKode:
+        sourcePath: skogbonitetkode
+        type: STRING
+        constraints:
+          codelist: SkogbonitetKode
+          required: true
+      arealbrukLandHovedklasse:
+        sourcePath: arealbruklandhovedklasse
+        type: STRING
+        constraints:
+          codelist: ArealbrukLandHovedklasse
+          required: true
+      arealbrukLandUnderklasse:
+        sourcePath: arealbruklandunderklasse
+        type: STRING
+        constraints:
+          codelist: ArealbrukLandUnderklasse
+          required: true
+      arealbrukLandKode:
+        sourcePath: arealbruklandkode
+        type: STRING
+        constraints:
+          codelist: ArealbrukLandKode
+          required: true
+      arealbrukHav:
+        sourcePath: arealbrukhav
+        type: STRING
+        constraints:
+          codelist: ArealbrukHav
+          required: true
+      arealbrukHavKode:
+        sourcePath: arealbrukhavkode
+        type: STRING
+        constraints:
+          codelist: ArealbrukHavKode
+          required: true
+      okosystemtypeNiva1:
+        sourcePath: okosystemtypeniva1
+        type: STRING
+        constraints:
+          codelist: OkosystemtypeNiva1
+          required: true
+      okosystemtypeNiva2:
+        sourcePath: okosystemtypeniva2
+        type: STRING
+        constraints:
+          codelist: OkosystemtypeNiva2
+          required: true
+      okosystemtypeNiva3:
+        sourcePath: okosystemtypeniva3
+        type: STRING
+        constraints:
+          codelist: OkosystemtypeNiva3
+          required: true
+      okosystemtypeKode:
+        sourcePath: okosystemtypekode
+        type: STRING
+        constraints:
+          codelist: OkosystemtypeKode
+      grunnkartKilde:
+        sourcePath: grunnkartkilde
+        type: STRING
+        constraints:
+          codelist: GrunnkartKilde
+          required: true
+      arealbrukKilde:
+        sourcePath: arealbrukkilde
+        type: STRING
+        constraints:
+          codelist: ArealbrukKilde
+          required: true
+      andelBygg:
+        sourcePath: andelbygg
+        type: INTEGER
+        constraints:
+          required: true
+      andelGra:
+        sourcePath: andelgra
+        type: INTEGER
+        constraints:
+          required: true
+      andelGronn:
+        sourcePath: andelgronn
+        type: INTEGER
+        constraints:
+          required: true
+      kommunenummer:
+        sourcePath: kommunenummer
+        type: STRING
+        constraints:
+          codelist: Kommunenummer
+          required: true
+      identifikasjon_lokalId:
+        sourcePath: identifikasjon_lokalid
+        type: STRING
+        constraints:
+          required: true
+      identifikasjon_navnerom:
+        sourcePath: identifikasjon_navnerom
+        type: STRING
+        constraints:
+          required: true
+      identifikasjon_versjonId:
+        sourcePath: identifikasjon_versjonid
+        type: STRING
+      kopidata_områdeId:
+        sourcePath: kopidata_områdeid
+        type: INTEGER
+      kopidata_originalDatavert:
+        sourcePath: kopidata_originaldatavert
+        type: STRING
+      kopidata_kopidato:
+        sourcePath: kopidata_kopidato
+        type: DATE
+        role: PRIMARY_INSTANT
+      oppdateringsdato:
+        sourcePath: oppdateringsdato
+        type: DATE

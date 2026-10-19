@@ -1,0 +1,111 @@
+# pygeoapi-konfigurasjon — generert fra datamodellen og metadata i Geonorge.
+# Verdier merket "<REPLACE_ME>" må fylles inn før tjenesten kan startes.
+server:
+  bind:
+    host: 0.0.0.0
+    port: 5000
+  cors: false
+  url: ${PYGEOAPI_SERVER_URL:-http://localhost:5000}
+  mimetype: application/json; charset=UTF-8
+  encoding: utf-8
+  gzip: false
+  languages:
+  - nb-NO
+  pretty_print: true
+  admin: ${PYGEOAPI_SERVER_ADMIN:-false}
+  limits:
+    default_items: 20
+    max_items: 100
+  map:
+    url: https://tile.openstreetmap.org/{z}/{x}/{y}.png
+    attribution: '&copy; <a href="https://openstreetmap.org/copyright">OpenStreetMap
+      contributors</a>'
+logging:
+  level: ERROR
+metadata:
+  identification:
+    title: Kart over grå arealer
+    description: 'Kart over grå arealet er utviklet i samarbeidet mellom Miljødirektoratet,
+      Kartverket, NIBIO og SSB.
+
+
+      Kartet er landsdekkende og viser grå arealer i henhold til Kommunal- og distriktsdepartementet
+      sin definisjon;
+
+      «Arealer som allerede er tatt i bruk eller sterkt påvirket av menneskelig bygge-
+      og anleggsaktivitet, inkludert bebyggelse, konstruksjoner, permanente overflater
+      og tilhørende arealer.»
+
+
+      Rapport kan leses her
+
+      https://dokument.geonorge.no/nasjonale-standarder-og-veiledere/dokumentasjon-og-metode/kart-over-gr%C3%A5-arealer-sluttrapport/1/kart-over-gr%C3%A5-arealer-sluttrapport.pdf
+
+
+      Oversikt over arealklasser som er med i kartet kan leses her
+
+      https://register.geonorge.no/nasjonale-standarder-og-veiledere/dokumentasjon-og-metode/kart-over-gr%C3%A5-arealer-utvalg-fra-grunnkartet'
+    keywords:
+    - Det offentlige kartgrunnlaget
+    - geodataloven
+    - arealplanerPBL
+    - Natur
+    keywords_type: theme
+    terms_of_service: Norge digitalt begrenset
+    url: https://kartkatalog.geonorge.no/metadata/c5f09d79-1546-495c-8b36-91efd4008bd7
+  license:
+    name: Norge digitalt-lisens
+    url: https://www.kartverket.no/geodataarbeid/norge-digitalt/partsinformasjon/avtaler-og-vilkar/norge-digitalt-lisens
+  provider:
+    name: Miljødirektoratet
+    url: "<REPLACE_ME>"
+  contact:
+    name: Kartverket
+    email: bernt.audun.stromsli@kartverket.no
+    url: "<REPLACE_ME>"
+resources:
+  gra-areal-flate:
+    type: collection
+    title: GraArealFlate
+    description: En flate i Grunnkartet som representerer et sammenhengende areal
+      med egenskaper som arealdekke, arealbruk, økosystemtype og tilhørende informasjon
+      om kildedata, brukt som grunnlag for arealanalyser og -regnskap.
+    keywords:
+    - GraArealFlate
+    extents:
+      spatial:
+        bbox:
+        - 2.0
+        - 57.0
+        - 33.0
+        - 72.0
+        crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
+    providers:
+    - type: feature
+      name: PostgreSQL
+      data:
+        host: "<REPLACE_ME>"
+        port: "<REPLACE_ME>"
+        dbname: uml_modell
+        user: "<REPLACE_ME>"
+        password: "<REPLACE_ME>"
+        search_path:
+        - public
+      id_field: objid
+      table: graarealflate
+      geom_field: omraade
+      crs:
+      - http://www.opengis.net/def/crs/OGC/1.3/CRS84
+      - http://www.opengis.net/def/crs/EPSG/0/25832
+      - http://www.opengis.net/def/crs/EPSG/0/25833
+      - http://www.opengis.net/def/crs/EPSG/0/25835
+      - http://www.opengis.net/def/crs/EPSG/0/5972
+      - http://www.opengis.net/def/crs/EPSG/0/5973
+      - http://www.opengis.net/def/crs/EPSG/0/5975
+      - http://www.opengis.net/def/crs/EPSG/0/3857
+      - http://www.opengis.net/def/crs/EPSG/0/3575
+      - http://www.opengis.net/def/crs/EPSG/0/4326
+      - http://www.opengis.net/def/crs/EPSG/0/3035
+      - http://www.opengis.net/def/crs/EPSG/0/4258
+      - http://www.opengis.net/def/crs/EPSG/0/5942
+      storage_crs: http://www.opengis.net/def/crs/EPSG/0/25833

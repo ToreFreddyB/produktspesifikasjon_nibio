@@ -1,0 +1,11 @@
+---
+id: uml_modell
+label: FIXME
+description: FIXME
+enabled: true
+serviceType: OGC_API
+collections:
+  graarealflate:
+    id: graarealflate
+    label: graarealflate
+    enabled: true
