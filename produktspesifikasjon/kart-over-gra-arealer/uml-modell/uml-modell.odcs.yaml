@@ -1,0 +1,396 @@
+# Open Data Contract Standard (ODCS) v3.1.0 — generert fra datamodellen.
+apiVersion: v3.1.0
+kind: DataContract
+id: urn:odcs:kart-over-gr-arealer-uml-modell:1.0.0
+version: 1.0.0
+status: active
+name: Kart over grå arealer - UML-modell
+tags:
+- Det offentlige kartgrunnlaget
+- geodataloven
+- arealplanerPBL
+- Natur
+- Norge digitalt begrenset
+description:
+  limitations: Norge digitalt begrenset. Lisens
+  purpose: "Verktøy for planlegging \nKartet skal kunne brukes som et verktøy for\
+    \ planlegging og bidra til å redusere nedbygging av natur - og jordbruksarealer,\
+    \ ved å synliggjøre allerede opparbeidede arealer.\n\nKartet er nå tilgjengelig\
+    \ og skal testes om det gir ønsket kunnskapsgrunnlag."
+authoritativeDefinitions:
+- url: https://data.geonorge.no/sosi/arealbruk/kart_over_gra_arealer
+  type: businessDefinition
+  description: Produktets identifikator
+- url: https://kartkatalog.geonorge.no/metadata/c5f09d79-1546-495c-8b36-91efd4008bd7
+  type: businessDefinition
+  description: Metadata i Kartkatalogen
+- url: https://register.geonorge.no/produktark/kart-over-grå-arealer
+  type: businessDefinition
+  description: Produktark
+- url: https://register.geonorge.no/tegneregler/kart-over-grå-arealer
+  type: implementation
+  description: Tegneregler
+team:
+  members:
+  - username: magnhild.sletten@miljodir.no
+    name: Magnhild Sletten
+    description: Miljødirektoratet
+    role: owner
+  - username: bernt.audun.stromsli@kartverket.no
+    name: Bernt Audun Strømsli
+    description: Kartverket
+    role: pointOfContact
+  - username: gisdrift@nibio.no
+    name: Norsk institutt for bioøkonomi
+    role: publisher
+support:
+- channel: Miljødirektoratet
+  tool: email
+  url: mailto:magnhild.sletten@miljodir.no
+  scope: issues
+  description: Kontaktpunkt hos Miljødirektoratet
+slaProperties:
+- property: frequency
+  value: Ikke planlagt
+  driver: operational
+  description: Under arbeid
+customProperties:
+- property: license
+  value: Norge digitalt-lisens
+- property: licenseUrl
+  value: https://www.kartverket.no/geodataarbeid/norge-digitalt/partsinformasjon/avtaler-og-vilkar/norge-digitalt-lisens
+- property: accessConstraints
+  value: Norge digitalt begrenset
+- property: useConstraints
+  value: Lisens
+- property: spatialRepresentationType
+  value: Vektor
+- property: language
+  value: nor
+- property: maintenanceAndUpdateStatement
+  value: Under arbeid
+servers:
+- server: geonorge-nedlastning
+  type: api
+  location: https://nedlasting.geonorge.no/api/capabilities/c5f09d79-1546-495c-8b36-91efd4008bd7
+  description: Geonorge nedlastning - GeoPackage
+- server: atom-feed
+  type: api
+  location: http://nedlasting.geonorge.no/geonorge/ATOM-feeds/KartOverGraArealer_AtomFeedGeoPackage.xml
+  description: Atom Feed - GeoPackage
+- server: kart-over-gr-arealer-wms-testversjon-1
+  type: api
+  location: https://wms.nibio.no/cgi-bin/graastruktur?service=wms&request=GetCapabilities
+  description: Kart over grå arealer WMS (Testversjon 1) - [{}]
+schema:
+- name: GraArealFlate
+  physicalName: graarealflate
+  logicalType: object
+  physicalType: table
+  description: En flate i Grunnkartet som representerer et sammenhengende areal med
+    egenskaper som arealdekke, arealbruk, økosystemtype og tilhørende informasjon
+    om kildedata, brukt som grunnlag for arealanalyser og -regnskap.
+  customProperties:
+  - property: sosiObjektType
+    value: GraArealFlate
+  properties:
+  - name: område
+    logicalType: object
+    physicalType: geometry(Surface)
+    required: true
+    customProperties:
+    - property: geometryType
+      value: Surface
+  - name: arealdekkeNiva1
+    logicalType: string
+    authoritativeDefinitions:
+    - url: https://register.geonorge.no/sosi-kodelister/temadata/grunnkart-arealanalyse/arealdekkeniva1
+      type: businessDefinition
+    customProperties:
+    - property: sosiCodeList
+      value: ArealdekkeNiva1
+    - property: asDictionary
+      value: 'true'
+    required: true
+  - name: arealdekkeNiva2
+    logicalType: string
+    authoritativeDefinitions:
+    - url: https://register.geonorge.no/sosi-kodelister/temadata/grunnkart-arealanalyse/arealdekkeniva2
+      type: businessDefinition
+    customProperties:
+    - property: sosiCodeList
+      value: ArealdekkeNiva2
+    - property: asDictionary
+      value: 'true'
+    required: true
+  - name: arealdekkeKode
+    logicalType: string
+    authoritativeDefinitions:
+    - url: https://register.geonorge.no/sosi-kodelister/temadata/grunnkart-arealanalyse/arealdekkekode
+      type: businessDefinition
+    customProperties:
+    - property: sosiCodeList
+      value: ArealdekkeKode
+    - property: asDictionary
+      value: 'true'
+    required: true
+  - name: grunnforhold
+    logicalType: string
+    authoritativeDefinitions:
+    - url: https://register.geonorge.no/sosi-kodelister/temadata/grunnkart-arealanalyse/grunnforhold
+      type: businessDefinition
+    customProperties:
+    - property: sosiCodeList
+      value: Grunnforhold
+    - property: asDictionary
+      value: 'true'
+    required: true
+  - name: grunnforholdKode
+    logicalType: string
+    authoritativeDefinitions:
+    - url: https://register.geonorge.no/sosi-kodelister/temadata/grunnkart-arealanalyse/grunnforholdkode
+      type: businessDefinition
+    customProperties:
+    - property: sosiCodeList
+      value: GrunnforholdKode
+    - property: asDictionary
+      value: 'true'
+    required: true
+  - name: skogbonitet
+    logicalType: string
+    authoritativeDefinitions:
+    - url: https://register.geonorge.no/sosi-kodelister/temadata/grunnkart-arealanalyse/skogbonitet
+      type: businessDefinition
+    customProperties:
+    - property: sosiCodeList
+      value: Skogbonitet
+    - property: asDictionary
+      value: 'true'
+    required: true
+  - name: skogbonitetKode
+    logicalType: string
+    authoritativeDefinitions:
+    - url: https://register.geonorge.no/sosi-kodelister/temadata/grunnkart-arealanalyse/skogbonitetkode
+      type: businessDefinition
+    customProperties:
+    - property: sosiCodeList
+      value: SkogbonitetKode
+    - property: asDictionary
+      value: 'true'
+    required: true
+  - name: arealbrukLandHovedklasse
+    logicalType: string
+    authoritativeDefinitions:
+    - url: https://register.geonorge.no/sosi-kodelister/temadata/ssbarealbruk/ssbarealbrukhovedklasse
+      type: businessDefinition
+    customProperties:
+    - property: sosiCodeList
+      value: ArealbrukLandHovedklasse
+    - property: asDictionary
+      value: 'true'
+    required: true
+  - name: arealbrukLandUnderklasse
+    logicalType: string
+    authoritativeDefinitions:
+    - url: https://register.geonorge.no/sosi-kodelister/temadata/ssbarealbruk/ssbarealbrukunderklasse
+      type: businessDefinition
+    customProperties:
+    - property: sosiCodeList
+      value: ArealbrukLandUnderklasse
+    - property: asDictionary
+      value: 'true'
+    required: true
+  - name: arealbrukLandKode
+    logicalType: string
+    authoritativeDefinitions:
+    - url: https://register.geonorge.no/sosi-kodelister/temadata/ssbarealbruk/ssbarealbrukkode
+      type: businessDefinition
+    customProperties:
+    - property: sosiCodeList
+      value: ArealbrukLandKode
+    - property: asDictionary
+      value: 'true'
+    required: true
+  - name: arealbrukHav
+    logicalType: string
+    authoritativeDefinitions:
+    - url: https://register.geonorge.no/sosi-kodelister/temadata/ssbarealbruk/ssbarealbrukhav
+      type: businessDefinition
+    customProperties:
+    - property: sosiCodeList
+      value: ArealbrukHav
+    - property: asDictionary
+      value: 'true'
+    required: true
+  - name: arealbrukHavKode
+    logicalType: string
+    authoritativeDefinitions:
+    - url: https://register.geonorge.no/sosi-kodelister/temadata/ssbarealbruk/ssbarealbrukhavkode
+      type: businessDefinition
+    customProperties:
+    - property: sosiCodeList
+      value: ArealbrukHavKode
+    - property: asDictionary
+      value: 'true'
+    required: true
+  - name: okosystemtypeNiva1
+    logicalType: string
+    authoritativeDefinitions:
+    - url: https://register.geonorge.no/sosi-kodelister/temadata/grunnkart-arealanalyse/okosystemtypeniva1
+      type: businessDefinition
+    customProperties:
+    - property: sosiCodeList
+      value: OkosystemtypeNiva1
+    - property: asDictionary
+      value: 'true'
+    required: true
+  - name: okosystemtypeNiva2
+    logicalType: string
+    authoritativeDefinitions:
+    - url: https://register.geonorge.no/sosi-kodelister/temadata/grunnkart-arealanalyse/okosystemtypeniva2
+      type: businessDefinition
+    customProperties:
+    - property: sosiCodeList
+      value: OkosystemtypeNiva2
+    - property: asDictionary
+      value: 'true'
+    required: true
+  - name: okosystemtypeNiva3
+    logicalType: string
+    authoritativeDefinitions:
+    - url: https://register.geonorge.no/sosi-kodelister/temadata/grunnkart-arealanalyse/okosystemtypeniva3
+      type: businessDefinition
+    customProperties:
+    - property: sosiCodeList
+      value: OkosystemtypeNiva3
+    - property: asDictionary
+      value: 'true'
+    required: true
+  - name: okosystemtypeKode
+    logicalType: string
+    authoritativeDefinitions:
+    - url: https://register.geonorge.no/sosi-kodelister/temadata/grunnkart-arealanalyse/okosystemtypekode
+      type: businessDefinition
+    customProperties:
+    - property: sosiCodeList
+      value: OkosystemtypeKode
+    - property: asDictionary
+      value: 'true'
+  - name: grunnkartKilde
+    logicalType: string
+    authoritativeDefinitions:
+    - url: https://register.geonorge.no/sosi-kodelister/temadata/grunnkart-arealanalyse/grunnkartkilde
+      type: businessDefinition
+    customProperties:
+    - property: sosiCodeList
+      value: GrunnkartKilde
+    - property: asDictionary
+      value: 'true'
+    required: true
+  - name: arealbrukKilde
+    logicalType: string
+    authoritativeDefinitions:
+    - url: https://register.geonorge.no/sosi-kodelister/temadata/ssbarealbruk/ssbarealbrukkilde
+      type: businessDefinition
+    customProperties:
+    - property: sosiCodeList
+      value: ArealbrukKilde
+    - property: asDictionary
+      value: 'true'
+    required: true
+  - name: andelBygg
+    logicalType: integer
+    required: true
+  - name: andelGra
+    logicalType: integer
+    required: true
+  - name: andelGronn
+    logicalType: integer
+    required: true
+  - name: kommunenummer
+    logicalType: string
+    authoritativeDefinitions:
+    - url: https://register.geonorge.no/sosi-kodelister/inndelinger/inndelingsbase/kommunenummer
+      type: businessDefinition
+    customProperties:
+    - property: sosiCodeList
+      value: Kommunenummer
+    - property: asDictionary
+      value: 'true'
+    required: true
+  - name: identifikasjon
+    logicalType: object
+    properties:
+    - name: lokalId
+      logicalType: string
+      description: 'lokal identifikator av et objekt
+
+
+        Merknad: Det er dataleverendørens ansvar å sørge for at den lokale identifikatoren
+        er unik innenfor navnerommet.'
+      required: true
+    - name: navnerom
+      logicalType: string
+      description: 'navnerom som unikt identifiserer datakilden til et objekt, anbefales
+        å være en http-URI
+
+
+        Eksempel: http://data.geonorge.no/SentraltStedsnavnsregister/1.0
+
+
+        Merknad : Verdien for nanverom vil eies av den dataprodusent som har ansvar
+        for de unike identifikatorene og må være registrert i data.geonorge.no eller
+        data.norge.no'
+      required: true
+    - name: versjonId
+      logicalType: string
+      description: identifikasjon av en spesiell versjon av et geografisk objekt (instans)
+    description: unik identifikasjon av et objekt
+    required: true
+  - name: kopidata
+    logicalType: object
+    properties:
+    - name: områdeId
+      logicalType: integer
+      description: 'identifikasjon av område som dataene dekker
+
+
+        Merknad: Kan angis med kommunenummer eller fylkesnummer. Disse bør spesifiseres
+        nærmere.'
+      required: true
+    - name: originalDatavert
+      logicalType: string
+      description: ansvarlig etat for forvaltning av data
+      required: true
+    - name: kopidato
+      logicalType: timestamp
+      description: 'dato når objektet ble kopiert fra originaldatasettet
+
+
+        Merknad:
+
+        Er en del av egenskapen Kopidata. Brukes i de tilfeller hvor en kopidatabase
+        brukes til distribusjon.
+
+        Å kopiere et datasett til en kopidatabase skal ikke føre til at Oppdateringsdato
+        blir endret.
+
+        Eventuell redigering av data i et kopidatasett medfører ny Oppdateringsdato,
+        Datafangstdato og/eller Verifiseringsdato.'
+      required: true
+    description: 'angivelse av at objektet er hentet fra et kopidatasett og ikke fra
+      originaldatasettet
+
+
+      Merknad: Inneholder informasjon om når kopidatasettet ble kopiert fra originaldatasettet
+      og hvem som er originaldataansvarlig'
+  - name: oppdateringsdato
+    logicalType: timestamp
+    description: 'tidspunkt for siste endring på objektet
+
+
+      Merknad:
+
+      Oppdateringsdato kan være forskjellig fra datafangsdato ved at data som er registrert
+      kan bufres en kortere eller lengre periode før disse legges inn i datasystemet
+      (databasen).'

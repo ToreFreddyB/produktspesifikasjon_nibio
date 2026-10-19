@@ -1,0 +1,284 @@
+{
+  "$comment": "JSON Schema document created by ShapeChange - https://shapechange.net/",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://skjema.geonorge.no/SOSI/produktspesifikasjon/kart-over-gra-arealer/uml-modell/umlmodell/uml-modell.json",
+  "definitions": {
+    "ArealbrukHav": {
+      "description": "Klassifisering av stedbundet arealbruk i havområder.",
+      "codelist": "https://register.geonorge.no/sosi-kodelister/temadata/ssbarealbruk/ssbarealbrukhav",
+      "type": "string",
+      "format": "uri"
+    },
+    "ArealbrukHavKode": {
+      "description": "Standardisert tallkode for arealbruk i hav.",
+      "codelist": "https://register.geonorge.no/sosi-kodelister/temadata/ssbarealbruk/ssbarealbrukhavkode",
+      "type": "string",
+      "format": "uri"
+    },
+    "ArealbrukKilde": {
+      "description": "Spesifiserer kilden for arealbruksinformasjonen.",
+      "codelist": "https://register.geonorge.no/sosi-kodelister/temadata/ssbarealbruk/ssbarealbrukkilde",
+      "type": "string",
+      "format": "uri"
+    },
+    "ArealbrukLandHovedklasse": {
+      "description": "Gir oversikt over bebygd og opparbeidet areal og beskriver den fysiske bruken av arealet, som bolig, næring eller samferdsel på et overordnet nivå.",
+      "codelist": "https://register.geonorge.no/sosi-kodelister/temadata/ssbarealbruk/ssbarealbrukhovedklasse",
+      "type": "string",
+      "format": "uri"
+    },
+    "ArealbrukLandKode": {
+      "description": "Standardisert tallkode for arealbruk på land for begge nivåer.",
+      "codelist": "https://register.geonorge.no/sosi-kodelister/temadata/ssbarealbruk/ssbarealbrukkode",
+      "type": "string",
+      "format": "uri"
+    },
+    "ArealbrukLandUnderklasse": {
+      "description": "Gir oversikt over bebygd og opparbeidet areal og beskriver den fysiske bruken av arealet, som bolig, næring eller samferdsel på et detaljert nivå.",
+      "codelist": "https://register.geonorge.no/sosi-kodelister/temadata/ssbarealbruk/ssbarealbrukunderklasse",
+      "type": "string",
+      "format": "uri"
+    },
+    "ArealdekkeKode": {
+      "description": "Standardisert tallkode for arealdekke på begge nivåer",
+      "codelist": "https://register.geonorge.no/sosi-kodelister/temadata/grunnkart-arealanalyse/arealdekkekode",
+      "type": "string",
+      "format": "uri"
+    },
+    "ArealdekkeNiva1": {
+      "description": "Viser hovedklasser for arealressurser med vekt på produksjonsgrunnlaget for jord- og skogbruk, som jordbruksareal, skog, vann og bebygd areal",
+      "codelist": "https://register.geonorge.no/sosi-kodelister/temadata/grunnkart-arealanalyse/arealdekkeniva1",
+      "type": "string",
+      "format": "uri"
+    },
+    "ArealdekkeNiva2": {
+      "description": "Gir en mer detaljert inndeling av arealressursene innenfor hovedklassene, for eksempel fulldyrka jord, myr eller åpen fastmark",
+      "codelist": "https://register.geonorge.no/sosi-kodelister/temadata/grunnkart-arealanalyse/arealdekkeniva2",
+      "type": "string",
+      "format": "uri"
+    },
+    "GraArealFlate": {
+      "description": "En flate i Grunnkartet som representerer et sammenhengende areal med egenskaper som arealdekke, arealbruk, økosystemtype og tilhørende informasjon om kildedata, brukt som grunnlag for arealanalyser og -regnskap.",
+      "type": "object",
+      "properties": {
+        "geometry": {
+          "$ref": "https://geojson.org/schema/Polygon.json"
+        },
+        "@type": {
+          "type": "string"
+        },
+        "id": {
+          "type": "string"
+        },
+        "arealdekkeNiva1": {
+          "$ref": "#/definitions/ArealdekkeNiva1"
+        },
+        "arealdekkeNiva2": {
+          "$ref": "#/definitions/ArealdekkeNiva2"
+        },
+        "arealdekkeKode": {
+          "$ref": "#/definitions/ArealdekkeKode"
+        },
+        "grunnforhold": {
+          "$ref": "#/definitions/Grunnforhold"
+        },
+        "grunnforholdKode": {
+          "$ref": "#/definitions/GrunnforholdKode"
+        },
+        "skogbonitet": {
+          "$ref": "#/definitions/Skogbonitet"
+        },
+        "skogbonitetKode": {
+          "$ref": "#/definitions/SkogbonitetKode"
+        },
+        "arealbrukLandHovedklasse": {
+          "$ref": "#/definitions/ArealbrukLandHovedklasse"
+        },
+        "arealbrukLandUnderklasse": {
+          "$ref": "#/definitions/ArealbrukLandUnderklasse"
+        },
+        "arealbrukLandKode": {
+          "$ref": "#/definitions/ArealbrukLandKode"
+        },
+        "arealbrukHav": {
+          "$ref": "#/definitions/ArealbrukHav"
+        },
+        "arealbrukHavKode": {
+          "$ref": "#/definitions/ArealbrukHavKode"
+        },
+        "okosystemtypeNiva1": {
+          "$ref": "#/definitions/OkosystemtypeNiva1"
+        },
+        "okosystemtypeNiva2": {
+          "$ref": "#/definitions/OkosystemtypeNiva2"
+        },
+        "okosystemtypeNiva3": {
+          "$ref": "#/definitions/OkosystemtypeNiva3"
+        },
+        "okosystemtypeKode": {
+          "$ref": "#/definitions/OkosystemtypeKode"
+        },
+        "grunnkartKilde": {
+          "$ref": "#/definitions/GrunnkartKilde"
+        },
+        "arealbrukKilde": {
+          "$ref": "#/definitions/ArealbrukKilde"
+        },
+        "andelBygg": {
+          "type": "integer"
+        },
+        "andelGra": {
+          "type": "integer"
+        },
+        "andelGronn": {
+          "type": "integer"
+        },
+        "kommunenummer": {
+          "$ref": "#/definitions/Kommunenummer"
+        },
+        "identifikasjon": {
+          "description": "unik identifikasjon av et objekt",
+          "$ref": "#/definitions/Identifikasjon"
+        },
+        "kopidata": {
+          "description": "angivelse av at objektet er hentet fra et kopidatasett og ikke fra originaldatasettet\n\nMerknad: Inneholder informasjon om når kopidatasettet ble kopiert fra originaldatasettet og hvem som er originaldataansvarlig",
+          "$ref": "#/definitions/Kopidata"
+        },
+        "oppdateringsdato": {
+          "description": "tidspunkt for siste endring på objektet\n\nMerknad:\nOppdateringsdato kan være forskjellig fra datafangsdato ved at data som er registrert kan bufres en kortere eller lengre periode før disse legges inn i datasystemet (databasen).",
+          "type": "string",
+          "format": "date"
+        }
+      },
+      "required": [
+        "@type",
+        "andelBygg",
+        "andelGra",
+        "andelGronn",
+        "arealbrukHav",
+        "arealbrukHavKode",
+        "arealbrukKilde",
+        "arealbrukLandHovedklasse",
+        "arealbrukLandKode",
+        "arealbrukLandUnderklasse",
+        "arealdekkeKode",
+        "arealdekkeNiva1",
+        "arealdekkeNiva2",
+        "grunnforhold",
+        "grunnforholdKode",
+        "grunnkartKilde",
+        "identifikasjon",
+        "kommunenummer",
+        "okosystemtypeNiva1",
+        "okosystemtypeNiva2",
+        "okosystemtypeNiva3",
+        "skogbonitet",
+        "skogbonitetKode"
+      ]
+    },
+    "Grunnforhold": {
+      "description": "Grunnforhold gir informasjon om tjukkelse, type og utbredelse av jorddekket i alle områder under skoggrensen",
+      "codelist": "https://register.geonorge.no/sosi-kodelister/temadata/grunnkart-arealanalyse/grunnforhold",
+      "type": "string",
+      "format": "uri"
+    },
+    "GrunnforholdKode": {
+      "description": "Standardisert tallkode for grunnforhold",
+      "codelist": "https://register.geonorge.no/sosi-kodelister/temadata/grunnkart-arealanalyse/grunnforholdkode",
+      "type": "string",
+      "format": "uri"
+    },
+    "GrunnkartKilde": {
+      "description": "Spesifiserer kilden for avgrensningen av grunnkart-flaten",
+      "codelist": "https://register.geonorge.no/sosi-kodelister/temadata/grunnkart-arealanalyse/grunnkartkilde",
+      "type": "string",
+      "format": "uri"
+    },
+    "Identifikasjon": {
+      "type": "object",
+      "properties": {
+        "lokalId": {
+          "description": "lokal identifikator av et objekt\n\nMerknad: Det er dataleverendørens ansvar å sørge for at den lokale identifikatoren er unik innenfor navnerommet.",
+          "type": "string"
+        },
+        "navnerom": {
+          "description": "navnerom som unikt identifiserer datakilden til et objekt, anbefales å være en http-URI\n\nEksempel: http://data.geonorge.no/SentraltStedsnavnsregister/1.0\n\nMerknad : Verdien for nanverom vil eies av den dataprodusent som har ansvar for de unike identifikatorene og må være registrert i data.geonorge.no eller data.norge.no",
+          "type": "string"
+        },
+        "versjonId": {
+          "description": "identifikasjon av en spesiell versjon av et geografisk objekt (instans)",
+          "type": "string"
+        }
+      },
+      "required": [
+        "lokalId",
+        "navnerom"
+      ]
+    },
+    "Kommunenummer": {
+      "description": "nummerering av kommunen i henhold til Statistisk sentralbyrå sin offisielle liste\n\nMerknad: Det presiseres at kommune alltid skal ha 4 siffer, dvs. eventuelt med ledende null. Kommune benyttes for kopling mot en rekke andre registre som også benytter 4 siffer.",
+      "codelist": "https://register.geonorge.no/sosi-kodelister/inndelinger/inndelingsbase/kommunenummer",
+      "type": "string",
+      "format": "uri"
+    },
+    "Kopidata": {
+      "type": "object",
+      "properties": {
+        "områdeId": {
+          "description": "identifikasjon av område som dataene dekker\n\nMerknad: Kan angis med kommunenummer eller fylkesnummer. Disse bør spesifiseres nærmere.",
+          "type": "integer"
+        },
+        "originalDatavert": {
+          "description": "ansvarlig etat for forvaltning av data",
+          "type": "string"
+        },
+        "kopidato": {
+          "description": "dato når objektet ble kopiert fra originaldatasettet\n\nMerknad:\nEr en del av egenskapen Kopidata. Brukes i de tilfeller hvor en kopidatabase brukes til distribusjon.\nÅ kopiere et datasett til en kopidatabase skal ikke føre til at Oppdateringsdato blir endret.\nEventuell redigering av data i et kopidatasett medfører ny Oppdateringsdato, Datafangstdato og/eller Verifiseringsdato.",
+          "type": "string",
+          "format": "date"
+        }
+      },
+      "required": [
+        "kopidato",
+        "områdeId",
+        "originalDatavert"
+      ]
+    },
+    "OkosystemtypeKode": {
+      "description": "Standardisert tallkode for økosystemtyper på alle tre nivåer",
+      "codelist": "https://register.geonorge.no/sosi-kodelister/temadata/grunnkart-arealanalyse/okosystemtypekode",
+      "type": "string",
+      "format": "uri"
+    },
+    "OkosystemtypeNiva1": {
+      "description": "Økosystemklasse nivå 1 har 12 klasser, og deler kartet inn i hovedøkosystemer etter europeisk arealtypologi utviklet spesielt til bruk i naturregnskap (Eurostat)",
+      "codelist": "https://register.geonorge.no/sosi-kodelister/temadata/grunnkart-arealanalyse/okosystemtypeniva1",
+      "type": "string",
+      "format": "uri"
+    },
+    "OkosystemtypeNiva2": {
+      "description": "Økosystemklasse nivå 2 gir en videre inndeling av de 12 klassene i nivå 1. Inndelingen følger europeisk arealtypologi utviklet spesielt til bruk i naturregnskap (Eurostat)",
+      "codelist": "https://register.geonorge.no/sosi-kodelister/temadata/grunnkart-arealanalyse/okosystemtypeniva2",
+      "type": "string",
+      "format": "uri"
+    },
+    "OkosystemtypeNiva3": {
+      "description": "Økosystemklasse nivå 3 gir en videre inndeling av økosystemklasse 1 og 2. Inndelingen følger europeisk arealtypologi utviklet spesielt til bruk i naturregnskap (Eurostat)",
+      "codelist": "https://register.geonorge.no/sosi-kodelister/temadata/grunnkart-arealanalyse/okosystemtypeniva3",
+      "type": "string",
+      "format": "uri"
+    },
+    "Skogbonitet": {
+      "description": "Et mål på arealets evne til å produsere trevirke, basert på trærnes høydevekst, alder, vegetasjonstype og forekomst av spesielle plantearter",
+      "codelist": "https://register.geonorge.no/sosi-kodelister/temadata/grunnkart-arealanalyse/skogbonitet",
+      "type": "string",
+      "format": "uri"
+    },
+    "SkogbonitetKode": {
+      "description": "Standardisert tallkode for skogbonitet",
+      "codelist": "https://register.geonorge.no/sosi-kodelister/temadata/grunnkart-arealanalyse/skogbonitetkode",
+      "type": "string",
+      "format": "uri"
+    }
+  }
+}

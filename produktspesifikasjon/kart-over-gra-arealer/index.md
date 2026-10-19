@@ -148,6 +148,9 @@ Lett tilgjengelige oversikter over grå arealer i Norge vil være et viktig kunn
 | Atom Feed | [Lenke](http://nedlasting.geonorge.no/geonorge/ATOM-feeds/KartOverGraArealer_AtomFeedGeoPackage.xml) | W3C:AtomFeed | GeoPackage | fylkesvis, kommunevis, landsfiler |
 | Kart over grå arealer WMS (Testversjon 1) | [Lenke](https://wms.nibio.no/cgi-bin/graastruktur?service=wms&request=GetCapabilities) | WMS-tjeneste | [{}] |  |
 | GeoPackage: uml-modell | [Lenke](https://raw.githubusercontent.com/ToreFreddyB/produktspesifikasjon_nibio/main/produktspesifikasjon/kart-over-gra-arealer/uml-modell/uml-modell.gpkg) | Nedlasting | GPKG |  |
+| PostGIS-skript: uml-modell.postgis | [Lenke](https://raw.githubusercontent.com/ToreFreddyB/produktspesifikasjon_nibio/main/produktspesifikasjon/kart-over-gra-arealer/uml-modell/uml-modell.postgis.sql) | Nedlasting | SQL |  |
+| GML/XSD-skjema: uml-modell | [Lenke](https://raw.githubusercontent.com/ToreFreddyB/produktspesifikasjon_nibio/main/produktspesifikasjon/kart-over-gra-arealer/uml-modell/schema/xsd/INPUT/uml-modell.xsd) | Nedlasting | XSD |  |
+| JSON Schema: uml-modell | [Lenke](https://raw.githubusercontent.com/ToreFreddyB/produktspesifikasjon_nibio/main/produktspesifikasjon/kart-over-gra-arealer/uml-modell/schema/jsonschema/INPUT/umlmodell/uml-modell.json) | Nedlasting | JSON Schema |  |
 
 ## Metadata
 
@@ -155,7 +158,7 @@ Lett tilgjengelige oversikter over grå arealer i Norge vil være et viktig kunn
 
 **Metadatastandardversjon**: 2003
 
-**Metadatadato**: 2026-10-07
+**Metadatadato**: 2026-10-18
 
 **språk**: nor
 

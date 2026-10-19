@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="UTF-8"?><schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:sc="http://www.interactive-instruments.de/ShapeChange/AppInfo" xmlns:umlmodell="https://skjema.geonorge.no/SOSI/produktspesifikasjon/kart-over-gra-arealer/uml-modell/1.0" elementFormDefault="qualified" targetNamespace="https://skjema.geonorge.no/SOSI/produktspesifikasjon/kart-over-gra-arealer/uml-modell/1.0" version="1.0">
+  <import namespace="http://www.interactive-instruments.de/ShapeChange/AppInfo" schemaLocation="https://shapechange.net/resources/schema/ShapeChangeAppinfo.xsd"/>
+  <import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
+  <!--XML Schema document created by ShapeChange - http://shapechange.net/-->
+  <element name="GraArealFlate" substitutionGroup="gml:AbstractFeature" type="umlmodell:GraArealFlateType">
+    <annotation>
+      <documentation>En flate i Grunnkartet som representerer et sammenhengende areal med egenskaper som arealdekke, arealbruk, økosystemtype og tilhørende informasjon om kildedata, brukt som grunnlag for arealanalyser og -regnskap.</documentation>
+    </annotation>
+  </element>
+  <complexType name="GraArealFlateType">
+    <complexContent>
+      <extension base="gml:AbstractFeatureType">
+        <sequence>
+          <element name="område" type="gml:SurfacePropertyType">
+            <annotation>
+              <documentation>den geografiske avgrensingen av Grunnkartflaten</documentation>
+              <appinfo>
+                <sc:taggedValue tag="SOSI_navn">FLATE</sc:taggedValue>
+              </appinfo>
+            </annotation>
+          </element>
+          <element name="arealdekkeNiva1" type="gml:CodeType">
+            <annotation>
+              <appinfo>
+                <sc:targetCodeListURI>https://register.geonorge.no/sosi-kodelister/temadata/grunnkart-arealanalyse/arealdekkeniva1</sc:targetCodeListURI>
+              </appinfo>
+            </annotation>
+          </element>
+          <element name="arealdekkeNiva2" type="gml:CodeType">
+            <annotation>
+              <appinfo>
+                <sc:targetCodeListURI>https://register.geonorge.no/sosi-kodelister/temadata/grunnkart-arealanalyse/arealdekkeniva2</sc:targetCodeListURI>
+              </appinfo>
+            </annotation>
+          </element>
+          <element name="arealdekkeKode" type="gml:CodeType">
+            <annotation>
+              <appinfo>
+                <sc:targetCodeListURI>https://register.geonorge.no/sosi-kodelister/temadata/grunnkart-arealanalyse/arealdekkekode</sc:targetCodeListURI>
+              </appinfo>
+            </annotation>
+          </element>
+          <element name="grunnforhold" type="gml:CodeType">
+            <annotation>
+              <appinfo>
+                <sc:targetCodeListURI>https://register.geonorge.no/sosi-kodelister/temadata/grunnkart-arealanalyse/grunnforhold</sc:targetCodeListURI>
+              </appinfo>
+            </annotation>
+          </element>
+          <element name="grunnforholdKode" type="gml:CodeType">
+            <annotation>
+              <appinfo>
+                <sc:targetCodeListURI>https://register.geonorge.no/sosi-kodelister/temadata/grunnkart-arealanalyse/grunnforholdkode</sc:targetCodeListURI>
+              </appinfo>
+            </annotation>
+          </element>
+          <element name="skogbonitet" type="gml:CodeType">
+            <annotation>
+              <appinfo>
+                <sc:targetCodeListURI>https://register.geonorge.no/sosi-kodelister/temadata/grunnkart-arealanalyse/skogbonitet</sc:targetCodeListURI>
+              </appinfo>
+            </annotation>
+          </element>
+          <element name="skogbonitetKode" type="gml:CodeType">
+            <annotation>
+              <appinfo>
+                <sc:targetCodeListURI>https://register.geonorge.no/sosi-kodelister/temadata/grunnkart-arealanalyse/skogbonitetkode</sc:targetCodeListURI>
+              </appinfo>
+            </annotation>
+          </element>
+          <element name="arealbrukLandHovedklasse" type="gml:CodeType">
+            <annotation>
+              <appinfo>
+                <sc:targetCodeListURI>https://register.geonorge.no/sosi-kodelister/temadata/ssbarealbruk/ssbarealbrukhovedklasse</sc:targetCodeListURI>
+              </appinfo>
+            </annotation>
+          </element>
+          <element name="arealbrukLandUnderklasse" type="gml:CodeType">
+            <annotation>
+              <appinfo>
+                <sc:targetCodeListURI>https://register.geonorge.no/sosi-kodelister/temadata/ssbarealbruk/ssbarealbrukunderklasse</sc:targetCodeListURI>
+              </appinfo>
+            </annotation>
+          </element>
+          <element name="arealbrukLandKode" type="gml:CodeType">
+            <annotation>
+              <appinfo>
+                <sc:targetCodeListURI>https://register.geonorge.no/sosi-kodelister/temadata/ssbarealbruk/ssbarealbrukkode</sc:targetCodeListURI>
+              </appinfo>
+            </annotation>
+          </element>
+          <element name="arealbrukHav" type="gml:CodeType">
+            <annotation>
+              <appinfo>
+                <sc:targetCodeListURI>https://register.geonorge.no/sosi-kodelister/temadata/ssbarealbruk/ssbarealbrukhav</sc:targetCodeListURI>
+              </appinfo>
+            </annotation>
+          </element>
+          <element name="arealbrukHavKode" type="gml:CodeType">
+            <annotation>
+              <appinfo>
+                <sc:targetCodeListURI>https://register.geonorge.no/sosi-kodelister/temadata/ssbarealbruk/ssbarealbrukhavkode</sc:targetCodeListURI>
+              </appinfo>
+            </annotation>
+          </element>
+          <element name="okosystemtypeNiva1" type="gml:CodeType">
+            <annotation>
+              <appinfo>
+                <sc:targetCodeListURI>https://register.geonorge.no/sosi-kodelister/temadata/grunnkart-arealanalyse/okosystemtypeniva1</sc:targetCodeListURI>
+              </appinfo>
+            </annotation>
+          </element>
+          <element name="okosystemtypeNiva2" type="gml:CodeType">
+            <annotation>
+              <appinfo>
+                <sc:targetCodeListURI>https://register.geonorge.no/sosi-kodelister/temadata/grunnkart-arealanalyse/okosystemtypeniva2</sc:targetCodeListURI>
+              </appinfo>
+            </annotation>
+          </element>
+          <element name="okosystemtypeNiva3" type="gml:CodeType">
+            <annotation>
+              <appinfo>
+                <sc:targetCodeListURI>https://register.geonorge.no/sosi-kodelister/temadata/grunnkart-arealanalyse/okosystemtypeniva3</sc:targetCodeListURI>
+              </appinfo>
+            </annotation>
+          </element>
+          <element minOccurs="0" name="okosystemtypeKode" type="gml:CodeType">
+            <annotation>
+              <appinfo>
+                <sc:targetCodeListURI>https://register.geonorge.no/sosi-kodelister/temadata/grunnkart-arealanalyse/okosystemtypekode</sc:targetCodeListURI>
+              </appinfo>
+            </annotation>
+          </element>
+          <element name="grunnkartKilde" type="gml:CodeType">
+            <annotation>
+              <appinfo>
+                <sc:targetCodeListURI>https://register.geonorge.no/sosi-kodelister/temadata/grunnkart-arealanalyse/grunnkartkilde</sc:targetCodeListURI>
+              </appinfo>
+            </annotation>
+          </element>
+          <element name="arealbrukKilde" type="gml:CodeType">
+            <annotation>
+              <appinfo>
+                <sc:targetCodeListURI>https://register.geonorge.no/sosi-kodelister/temadata/ssbarealbruk/ssbarealbrukkilde</sc:targetCodeListURI>
+              </appinfo>
+            </annotation>
+          </element>
+          <element name="andelBygg" type="integer"/>
+          <element name="andelGra" type="integer"/>
+          <element name="andelGronn" type="integer"/>
+          <element name="kommunenummer" type="gml:CodeType">
+            <annotation>
+              <appinfo>
+                <sc:targetCodeListURI>https://register.geonorge.no/sosi-kodelister/inndelinger/inndelingsbase/kommunenummer</sc:targetCodeListURI>
+              </appinfo>
+            </annotation>
+          </element>
+          <element name="identifikasjon" type="umlmodell:IdentifikasjonPropertyType">
+            <annotation>
+              <documentation>unik identifikasjon av et objekt</documentation>
+              <appinfo>
+                <sc:taggedValue tag="SOSI_navn">IDENT</sc:taggedValue>
+              </appinfo>
+            </annotation>
+          </element>
+          <element minOccurs="0" name="kopidata" type="umlmodell:KopidataPropertyType">
+            <annotation>
+              <documentation>angivelse av at objektet er hentet fra et kopidatasett og ikke fra originaldatasettet
+
+Merknad: Inneholder informasjon om når kopidatasettet ble kopiert fra originaldatasettet og hvem som er originaldataansvarlig</documentation>
+              <appinfo>
+                <sc:taggedValue tag="SOSI_navn">KOPIDATA</sc:taggedValue>
+              </appinfo>
+            </annotation>
+          </element>
+          <element minOccurs="0" name="oppdateringsdato" type="date">
+            <annotation>
+              <documentation>tidspunkt for siste endring på objektet
+
+Merknad:
+Oppdateringsdato kan være forskjellig fra datafangsdato ved at data som er registrert kan bufres en kortere eller lengre periode før disse legges inn i datasystemet (databasen).</documentation>
+              <appinfo>
+                <sc:taggedValue tag="SOSI_navn">OPPDATERINGSDATO</sc:taggedValue>
+              </appinfo>
+            </annotation>
+          </element>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="GraArealFlatePropertyType">
+    <sequence minOccurs="0">
+      <element ref="umlmodell:GraArealFlate"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="Identifikasjon" substitutionGroup="gml:AbstractObject" type="umlmodell:IdentifikasjonType"/>
+  <complexType name="IdentifikasjonType">
+    <sequence>
+      <element name="lokalId" type="string">
+        <annotation>
+          <documentation>lokal identifikator av et objekt
+
+Merknad: Det er dataleverendørens ansvar å sørge for at den lokale identifikatoren er unik innenfor navnerommet.</documentation>
+          <appinfo>
+            <sc:taggedValue tag="SOSI_navn">LOKALID</sc:taggedValue>
+          </appinfo>
+        </annotation>
+      </element>
+      <element name="navnerom" type="string">
+        <annotation>
+          <documentation>navnerom som unikt identifiserer datakilden til et objekt, anbefales å være en http-URI
+
+Eksempel: http://data.geonorge.no/SentraltStedsnavnsregister/1.0
+
+Merknad : Verdien for nanverom vil eies av den dataprodusent som har ansvar for de unike identifikatorene og må være registrert i data.geonorge.no eller data.norge.no</documentation>
+          <appinfo>
+            <sc:taggedValue tag="SOSI_navn">NAVNEROM</sc:taggedValue>
+          </appinfo>
+        </annotation>
+      </element>
+      <element minOccurs="0" name="versjonId" type="string">
+        <annotation>
+          <documentation>identifikasjon av en spesiell versjon av et geografisk objekt (instans)</documentation>
+          <appinfo>
+            <sc:taggedValue tag="SOSI_navn">VERSJONID</sc:taggedValue>
+          </appinfo>
+        </annotation>
+      </element>
+    </sequence>
+  </complexType>
+  <complexType name="IdentifikasjonPropertyType">
+    <sequence>
+      <element ref="umlmodell:Identifikasjon"/>
+    </sequence>
+  </complexType>
+  <element name="Kopidata" substitutionGroup="gml:AbstractObject" type="umlmodell:KopidataType"/>
+  <complexType name="KopidataType">
+    <sequence>
+      <element name="områdeId" type="integer">
+        <annotation>
+          <documentation>identifikasjon av område som dataene dekker
+
+Merknad: Kan angis med kommunenummer eller fylkesnummer. Disse bør spesifiseres nærmere.</documentation>
+          <appinfo>
+            <sc:taggedValue tag="SOSI_navn">OMRÅDEID</sc:taggedValue>
+          </appinfo>
+        </annotation>
+      </element>
+      <element name="originalDatavert" type="string">
+        <annotation>
+          <documentation>ansvarlig etat for forvaltning av data</documentation>
+          <appinfo>
+            <sc:taggedValue tag="SOSI_navn">ORIGINALDATAVERT</sc:taggedValue>
+          </appinfo>
+        </annotation>
+      </element>
+      <element name="kopidato" type="date">
+        <annotation>
+          <documentation>dato når objektet ble kopiert fra originaldatasettet
+
+Merknad:
+Er en del av egenskapen Kopidata. Brukes i de tilfeller hvor en kopidatabase brukes til distribusjon.
+Å kopiere et datasett til en kopidatabase skal ikke føre til at Oppdateringsdato blir endret.
+Eventuell redigering av data i et kopidatasett medfører ny Oppdateringsdato, Datafangstdato og/eller Verifiseringsdato.</documentation>
+          <appinfo>
+            <sc:taggedValue tag="SOSI_navn">KOPIDATO</sc:taggedValue>
+          </appinfo>
+        </annotation>
+      </element>
+    </sequence>
+  </complexType>
+  <complexType name="KopidataPropertyType">
+    <sequence>
+      <element ref="umlmodell:Kopidata"/>
+    </sequence>
+  </complexType>
+</schema>
