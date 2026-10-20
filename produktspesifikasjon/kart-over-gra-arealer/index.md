@@ -158,7 +158,7 @@ Lett tilgjengelige oversikter over grå arealer i Norge vil være et viktig kunn
 
 **Metadatastandardversjon**: 2003
 
-**Metadatadato**: 2026-10-19
+**Metadatadato**: 2026-10-20
 
 **språk**: nor
 
